@@ -8,6 +8,7 @@ import { one, run } from "./client";
 const now = () => new Date().toISOString();
 
 function pub(path: string): boolean {
+  if (!existsSync(resolve("public"))) return true;
   return existsSync(resolve("public", path.replace(/^\//, "")));
 }
 

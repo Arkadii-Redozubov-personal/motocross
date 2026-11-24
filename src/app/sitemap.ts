@@ -11,7 +11,7 @@ const ROUTES: [string, number][] = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = process.env.SITE_URL ?? "http://localhost:3000";
+  const base = process.env.SITE_URL ?? process.env.URL ?? "http://localhost:3000";
   const langs = (p: string) => ({ languages: { pl: `${base}${p}?lang=pl`, uk: `${base}${p}?lang=uk`, ru: `${base}${p}?lang=ru` } });
   return ROUTES.map(([p, priority]) => ({
     url: `${base}${p}`,

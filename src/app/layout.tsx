@@ -8,7 +8,7 @@ export const viewport: Viewport = { themeColor: "#1c1d21", width: "device-width"
 
 export async function generateMetadata(): Promise<Metadata> {
   const d = getDict(await getLocale());
-  const base = process.env.SITE_URL ?? "http://localhost:3000";
+  const base = process.env.SITE_URL ?? process.env.URL ?? "http://localhost:3000";
   return {
     metadataBase: new URL(base),
     title: d.meta.title,
