@@ -1,0 +1,11 @@
+node_modules
+.next
+next-env.d.ts
+data/*.sqlite*
+.env*.local
+.impeccable/build
+.impeccable/review
+*.tsbuildinfo
+public/uploads
+scripts/download-media.mjs
+
