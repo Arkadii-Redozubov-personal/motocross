@@ -41,7 +41,7 @@ export default async function BookingPage({ searchParams }: { searchParams: Prom
       <PageBanner
         title={d.booking.title}
         lead={d.booking.lead}
-        image="/media/ig/asix-88-profile.jpg"
+        image="/media/ig/asix-88-profile.webp"
         imageAlt={d.hero.imgAlt2}
         imagePosition="50% 55%"
       />

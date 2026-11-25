@@ -15,7 +15,7 @@ export function Hero({ d, locale, site }: { d: Dict; locale: Locale; site: Site 
     <section className="relative overflow-hidden bg-obsidian">
       <div className="pointer-events-none absolute inset-0 lg:hidden" aria-hidden="true">
         <Image
-          src="/media/ig/fleet-pinned-cover.jpg"
+          src="/media/ig/fleet-pinned-cover.webp"
           alt=""
           fill
           priority
@@ -60,11 +60,11 @@ export function Hero({ d, locale, site }: { d: Dict; locale: Locale; site: Site 
         </div>
         <div className="relative hidden lg:col-span-5 lg:block">
           <div className="cut relative aspect-[3/4] w-full overflow-hidden bg-card">
-            <Image src="/media/ig/fleet-pinned-cover.jpg" alt={d.hero.imgAlt} fill priority sizes="(min-width:1024px) 40vw, 90vw" className="object-cover object-top" />
+            <Image src="/media/ig/fleet-pinned-cover.webp" alt={d.hero.imgAlt} fill priority sizes="(min-width:1024px) 40vw, 90vw" className="object-cover object-top" />
             <div className="absolute inset-0 bg-gradient-to-t from-obsidian/60 via-transparent to-transparent" aria-hidden="true" />
           </div>
           <div className="cut-sm absolute -bottom-6 -left-10 aspect-square w-[42%] overflow-hidden border-4 border-obsidian bg-card">
-            <Image src="/media/ig/asix-88-profile.jpg" alt={d.hero.imgAlt2} fill sizes="(min-width:1024px) 18vw, 40vw" className="object-cover" />
+            <Image src="/media/ig/asix-88-profile.webp" alt={d.hero.imgAlt2} fill sizes="(min-width:1024px) 18vw, 40vw" className="object-cover" />
           </div>
           <div className="absolute -bottom-3 -right-4 rounded-ctl border border-obsidian bg-amber px-4 py-3 text-ink">
             <p className="num font-display text-3xl font-bold leading-none">{d.hero.badgeNum}</p>

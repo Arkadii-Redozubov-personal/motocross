@@ -45,7 +45,7 @@ export function GalleryGrid({ items, d, locale }: { items: GalleryItem[]; d: Dic
               <video
                 ref={vidRef}
                 src="/media/ig/reel-quad-trail.mp4"
-                poster="/media/ig/reel-quad-poster.jpg"
+                poster="/media/ig/reel-quad-poster.webp"
                 playsInline
                 loop
                 muted={muted}

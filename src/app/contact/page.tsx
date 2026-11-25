@@ -28,7 +28,7 @@ export default async function ContactPage() {
         lead={d.pages.contact.lead}
         ctaHref="/booking"
         ctaLabel={d.common.book}
-        image="/media/ig/segway-trail-action.jpg"
+        image="/media/ig/segway-trail-action.webp"
         imageAlt={d.pages.contact.metaTitle}
         imagePosition="50% 42%"
       />

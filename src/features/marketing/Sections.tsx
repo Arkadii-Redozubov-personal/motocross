@@ -9,6 +9,7 @@ import { ModelCard } from "./ModelCard";
 import { FleetGrid } from "./FleetGrid";
 import { GalleryGrid } from "./GalleryGrid";
 import { LangSwitch } from "./LangSwitch";
+import { RegionMap } from "./RegionMap";
 import type { Dict } from "@/shared/i18n/dictionaries/pl";
 import { formatDays, type Locale } from "@/shared/i18n/config";
 import type { Site } from "./data";
@@ -216,15 +217,6 @@ export function HowSection({ d, surface = "slate" }: { d: Dict; surface?: Surfac
   );
 }
 
-const MAP_PINS = [
-  { x: 560, y: 120, name: "Poznań (Sob)", main: true, dy: 5 },
-  { x: 460, y: 310, name: "Wrocław", main: true, dy: 5 },
-  { x: 375, y: 295, name: "Wróblowice / Lutynia", main: false, dy: -12 },
-  { x: 255, y: 280, name: "Legnica", main: false, dy: 5 },
-  { x: 345, y: 355, name: "Środa Śląska", main: false, dy: 5 },
-  { x: 385, y: 410, name: "Świdnica", main: false, dy: 5 },
-];
-
 export function CityScheduleCards({ d, locale, site }: { d: Dict; locale: Locale; site: Site }) {
   return (
     <ul className="grid gap-6 md:grid-cols-2">
@@ -314,33 +306,7 @@ export function TerrainCardsGrid({ d }: { d: Dict }) {
   );
 }
 
-export function RegionMap({ d }: { d: Dict }) {
-  return (
-    <div className="overflow-hidden rounded-card border border-line bg-card">
-      <svg viewBox="0 0 900 460" className="block h-auto w-full bg-[#18191d]" role="img" aria-label={d.locations.mapLabel}>
-        <g stroke="#343740" strokeWidth="1.5" fill="none">
-          <path d="M120 430 Q 250 350 385 410 T 610 340 T 820 280" />
-          <path d="M255 280 L 345 355 L 385 410 L 460 310 L 560 120" stroke="#f5b700" strokeOpacity="0.35" strokeDasharray="6 6" strokeWidth="2" />
-          <path d="M80 210 Q 320 260 460 310 T 790 220" />
-          <path d="M460 310 Q 510 210 560 120" />
-          <circle cx="460" cy="310" r="115" stroke="#f5b700" strokeOpacity="0.14" />
-          <circle cx="460" cy="310" r="195" stroke="#f5b700" strokeOpacity="0.08" />
-        </g>
-        {MAP_PINS.map((p) => (
-          <g key={p.name} transform={`translate(${p.x} ${p.y})`}>
-            {p.main && <circle r="20" fill="#f5b700" fillOpacity="0.18" />}
-            <circle r={p.main ? 8 : 5} fill={p.main ? "#f5b700" : "#e26d38"} stroke="#18191d" strokeWidth="2" />
-            <text x={p.main ? 14 : 10} y={p.dy} fill={p.main ? "#f5f5f4" : "#cfd2d8"} fontSize={p.main ? "16" : "13"} fontWeight={p.main ? "700" : "500"}>
-              {p.name}
-            </text>
-          </g>
-        ))}
-      </svg>
-    </div>
-  );
-}
-
-export function LocationsTerrainsSection({ d, surface = "obsidian" }: { d: Dict; surface?: Surface }) {
+export function LocationsTerrainsSection({ d, locale, surface = "obsidian" }: { d: Dict; locale: Locale; surface?: Surface }) {
   return (
     <section id="terrains" className={`${bgOf(surface)} py-16 lg:py-24`}>
       <div className={`${wrap} space-y-14`}>
@@ -348,7 +314,7 @@ export function LocationsTerrainsSection({ d, surface = "obsidian" }: { d: Dict;
           <div className="mb-8"><SplitTitle parts={d.locations.cardsTitle} /></div>
           <TerrainCardsGrid d={d} />
         </div>
-        <RegionMap d={d} />
+        <RegionMap d={d} locale={locale} />
       </div>
     </section>
   );

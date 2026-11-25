@@ -28,7 +28,7 @@ export default async function FleetPage() {
         lead={d.pages.fleet.lead}
         ctaHref="/booking"
         ctaLabel={d.common.book}
-        image="/media/ig/enduro-lineup.jpg"
+        image="/media/ig/enduro-lineup.webp"
         imageAlt={d.pages.fleet.metaTitle}
         imagePosition="50% 60%"
       />

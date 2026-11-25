@@ -40,7 +40,7 @@ const MODELS: ModelSeed[] = [
       "Усилитель руля EPS|2 места|Лебёдка спереди|Привод 4x4",
     ],
     beginner: false,
-    image: "/media/ig/segway-quad-card.jpg",
+    image: "/media/ig/segway-quad-card.webp",
     hourly: 250,
     assets: ["QUAD-SEG-01", "QUAD-SEG-02", "QUAD-SEG-03"],
   },
@@ -59,7 +59,7 @@ const MODELS: ModelSeed[] = [
       "Привод 4x4|LED-балка|Внедорожные шины|Багажный кофр",
     ],
     beginner: false,
-    image: "/media/client/quads-terrain.jpg",
+    image: "/media/client/quads-terrain.webp",
     hourly: 250,
     assets: ["QUAD-TGB-01"],
   },
@@ -74,7 +74,7 @@ const MODELS: ModelSeed[] = [
     ],
     specs: ["250 cm³|Lekka rama|Opony terenowe", "250 см³|Легка рама|Позашляхові шини", "250 см³|Лёгкая рама|Внедорожные шины"],
     beginner: false,
-    image: "/media/ig/asix-88-profile.jpg",
+    image: "/media/ig/asix-88-profile.webp",
     hourly: 150,
     assets: ["MOTO-250-01", "MOTO-250-02", "MOTO-250-03"],
   },
@@ -89,7 +89,7 @@ const MODELS: ModelSeed[] = [
     ],
     specs: ["Klasa Standard|Opony terenowe|Dla jeżdżących w terenie", "Клас Стандарт|Позашляхові шини|Для досвідчених", "Класс Стандарт|Внедорожные шины|Для опытных"],
     beginner: false,
-    image: "/media/ig/quarry-4-riders.jpg",
+    image: "/media/ig/quarry-4-riders.webp",
     hourly: 200,
     assets: ["MOTO-STD-01", "MOTO-STD-02", "MOTO-STD-03"],
   },
@@ -104,23 +104,23 @@ const MODELS: ModelSeed[] = [
     ],
     specs: ["300 cm³|Nowszy model|Nauka na placu przed trasą", "300 см³|Новіша модель|Навчання на майданчику перед трасою", "300 см³|Более новая модель|Обучение на площадке перед трассой"],
     beginner: true,
-    image: "/media/ig/enduro-300-beginner.jpg",
+    image: "/media/ig/enduro-300-beginner.webp",
     hourly: 250,
     assets: ["MOTO-300-01"],
   },
 ];
 
 const GALLERY_SEED = [
-  { src: "/media/ig/quarry-4-riders.jpg", alt: { pl: "Czterech kierowców enduro na kopalni piasku", uk: "Четверо райдерів ендуро в піщаному кар'єрі", ru: "Четверо райдеров эндуро в песчаном карьере" } },
-  { src: "/media/ig/segway-trail-action.jpg", alt: { pl: "Widok z kierownicy quada Segway na leśnej ścieżce", uk: "Вигляд із керма квадроцикла Segway на лісовій стежці", ru: "Вид с руля квадроцикла Segway на лесной тропе" } },
-  { src: "/media/ig/enduro-pov-forest.jpg", alt: { pl: "Jazda enduro leśnym szlakiem pod Wrocławiem", uk: "Поїздка на ендуро лісовою трасою біля Вроцлава", ru: "Поездка на эндуро по лесной трассе под Вроцлавом" } },
-  { src: "/media/ig/fleet-pinned-cover.jpg", alt: { pl: "Kierowca w kasku na pomarańczowym quadzie Segway AT5L", uk: "Райдер у шоломі на помаранчевому квадроциклі Segway AT5L", ru: "Райдер в шлеме на оранжевом квадроцикле Segway AT5L" } },
-  { src: "/media/ig/enduro-lineup.jpg", alt: { pl: "Motocykle ASIX Enduro przygotowane do jazdy", uk: "Мотоцикли ASIX Enduro готові до виїзду", ru: "Мотоциклы ASIX Enduro готовы к выезду" } },
-  { src: "/media/ig/rider-raven-helmet.jpg", alt: { pl: "Uczestniczka jazdy w kasku Raven i rękawicach", uk: "Учасниця поїздки у шоломі Raven та рукавицях", ru: "Участница поездки в шлеме Raven и перчатках" } },
-  { src: "/media/ig/quad-forest-ride.jpg", alt: { pl: "Ślady opon na piaszczystym poligonie", uk: "Сліди шин на піщаному полігоні", ru: "Следы шин на песчаном полигоне" } },
-  { src: "/media/client/quads-terrain.jpg", alt: { pl: "Dwa quady terenowe na błotnistym placu we mgle", uk: "Два квадроцикли на брудному майданчику в тумані", ru: "Два квадроцикла на грязной площадке в тумане" } },
-  { src: "/media/ig/forest-river-tour.jpg", alt: { pl: "Leśna rzeka na trasie wyprawowej pod Świdnicą", uk: "Лісова річка на маршруті під Свідницею", ru: "Лесная речка на маршруте под Свидницей" } },
-  { src: "/media/ig/asix-88-profile.jpg", alt: { pl: "Motocykl enduro ASIX 250 cm³ w kolorze limonkowym", uk: "Мотоцикл ендуро ASIX 250 см³ лаймового кольору", ru: "Мотоцикл эндуро ASIX 250 см³ лаймового цвета" } },
+  { src: "/media/ig/quarry-4-riders.webp", alt: { pl: "Czterech kierowców enduro na kopalni piasku", uk: "Четверо райдерів ендуро в піщаному кар'єрі", ru: "Четверо райдеров эндуро в песчаном карьере" } },
+  { src: "/media/ig/segway-trail-action.webp", alt: { pl: "Widok z kierownicy quada Segway na leśnej ścieżce", uk: "Вигляд із керма квадроцикла Segway на лісовій стежці", ru: "Вид с руля квадроцикла Segway на лесной тропе" } },
+  { src: "/media/ig/enduro-pov-forest.webp", alt: { pl: "Jazda enduro leśnym szlakiem pod Wrocławiem", uk: "Поїздка на ендуро лісовою трасою біля Вроцлава", ru: "Поездка на эндуро по лесной трассе под Вроцлавом" } },
+  { src: "/media/ig/fleet-pinned-cover.webp", alt: { pl: "Kierowca w kasku na pomarańczowym quadzie Segway AT5L", uk: "Райдер у шоломі на помаранчевому квадроциклі Segway AT5L", ru: "Райдер в шлеме на оранжевом квадроцикле Segway AT5L" } },
+  { src: "/media/ig/enduro-lineup.webp", alt: { pl: "Motocykle ASIX Enduro przygotowane do jazdy", uk: "Мотоцикли ASIX Enduro готові до виїзду", ru: "Мотоциклы ASIX Enduro готовы к выезду" } },
+  { src: "/media/ig/rider-raven-helmet.webp", alt: { pl: "Uczestniczka jazdy w kasku Raven i rękawicach", uk: "Учасниця поїздки у шоломі Raven та рукавицях", ru: "Участница поездки в шлеме Raven и перчатках" } },
+  { src: "/media/ig/quad-forest-ride.webp", alt: { pl: "Ślady opon na piaszczystym poligonie", uk: "Сліди шин на піщаному полігоні", ru: "Следы шин на песчаном полигоне" } },
+  { src: "/media/client/quads-terrain.webp", alt: { pl: "Dwa quady terenowe na błotnistym placu we mgle", uk: "Два квадроцикли на брудному майданчику в тумані", ru: "Два квадроцикла на грязной площадке в тумане" } },
+  { src: "/media/ig/forest-river-tour.webp", alt: { pl: "Leśna rzeka na trasie wyprawowej pod Świdnicą", uk: "Лісова річка на маршруті під Свідницею", ru: "Лесная речка на маршруте под Свидницей" } },
+  { src: "/media/ig/asix-88-profile.webp", alt: { pl: "Motocykl enduro ASIX 250 cm³ w kolorze limonkowym", uk: "Мотоцикл ендуро ASIX 250 см³ лаймового кольору", ru: "Мотоцикл эндуро ASIX 250 см³ лаймового цвета" } },
 ];
 
 export function seedIfEmpty(db: DatabaseSync) {
@@ -129,16 +129,27 @@ export function seedIfEmpty(db: DatabaseSync) {
     // Idempotent media upgrade if the DB was first seeded before IG photos were downloaded.
     const seg = one<{ image_url: string }>(db, "SELECT image_url FROM vehicle_models WHERE slug = 'segway-at5l'");
     const galRow = one<{ value_json: string }>(db, "SELECT value_json FROM site_settings WHERE key = 'gallery'");
-    const galLen = galRow ? (JSON.parse(galRow.value_json) as unknown[]).length : 0;
-    if (seg?.image_url === "/media/client/quads-terrain.jpg" && galLen <= 2) {
+    const galleryItems = galRow ? (JSON.parse(galRow.value_json) as Array<Record<string, unknown>>) : [];
+    const galLen = galleryItems.length;
+    if ((seg?.image_url === "/media/client/quads-terrain.jpg" || seg?.image_url === "/media/client/quads-terrain.webp") && galLen <= 2) {
       for (const m of MODELS) {
         if (pub(m.image)) run(db, "UPDATE vehicle_models SET image_url = ? WHERE slug = ?", m.image, m.slug);
       }
       const nextGallery = GALLERY_SEED.filter((x) => pub(x.src)).map((x, i) => ({ id: `g${i + 1}`, visible: true, ...x }));
       run(db, "UPDATE site_settings SET value_json = ?, updated_at_utc = ? WHERE key = 'gallery'", JSON.stringify(nextGallery), now());
     }
-    if (seg?.image_url === "/media/ig/fleet-pinned-cover.jpg" && pub("/media/ig/segway-quad-card.jpg")) {
-      run(db, "UPDATE vehicle_models SET image_url = ? WHERE slug = 'segway-at5l'", "/media/ig/segway-quad-card.jpg");
+    if ((seg?.image_url === "/media/ig/fleet-pinned-cover.jpg" || seg?.image_url === "/media/ig/fleet-pinned-cover.webp") && pub("/media/ig/segway-quad-card.webp")) {
+      run(db, "UPDATE vehicle_models SET image_url = ? WHERE slug = 'segway-at5l'", "/media/ig/segway-quad-card.webp");
+    }
+    // Idempotent .jpg -> .webp migration for built-in /media/ assets in existing SQLite DBs.
+    run(db, "UPDATE vehicle_models SET image_url = REPLACE(image_url, '.jpg', '.webp') WHERE image_url LIKE '/media/%.jpg'");
+    if (galleryItems.some((item) => typeof item.src === "string" && /^\/media\/.*\.jpg$/i.test(item.src))) {
+      const migrated = galleryItems.map((item) =>
+        typeof item.src === "string" && /^\/media\/.*\.jpg$/i.test(item.src)
+          ? { ...item, src: item.src.replace(/\.jpg$/i, ".webp") }
+          : item
+      );
+      run(db, "UPDATE site_settings SET value_json = ?, updated_at_utc = ? WHERE key = 'gallery'", JSON.stringify(migrated), now());
     }
     return;
   }

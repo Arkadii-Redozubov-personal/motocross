@@ -31,7 +31,7 @@ export default async function GalleryPage() {
         secondaryHref={site.contact.instagramUrl || undefined}
         secondaryLabel={d.common.instagram}
         secondaryExternal
-        image="/media/ig/rider-raven-helmet.jpg"
+        image="/media/ig/rider-raven-helmet.webp"
         imageAlt={d.pages.gallery.metaTitle}
         imagePosition="50% 35%"
       />
