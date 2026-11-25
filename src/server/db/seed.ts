@@ -40,7 +40,7 @@ const MODELS: ModelSeed[] = [
       "Усилитель руля EPS|2 места|Лебёдка спереди|Привод 4x4",
     ],
     beginner: false,
-    image: "/media/ig/fleet-pinned-cover.jpg",
+    image: "/media/ig/segway-quad-card.jpg",
     hourly: 250,
     assets: ["QUAD-SEG-01", "QUAD-SEG-02", "QUAD-SEG-03"],
   },
@@ -136,6 +136,9 @@ export function seedIfEmpty(db: DatabaseSync) {
       }
       const nextGallery = GALLERY_SEED.filter((x) => pub(x.src)).map((x, i) => ({ id: `g${i + 1}`, visible: true, ...x }));
       run(db, "UPDATE site_settings SET value_json = ?, updated_at_utc = ? WHERE key = 'gallery'", JSON.stringify(nextGallery), now());
+    }
+    if (seg?.image_url === "/media/ig/fleet-pinned-cover.jpg" && pub("/media/ig/segway-quad-card.jpg")) {
+      run(db, "UPDATE vehicle_models SET image_url = ? WHERE slug = 'segway-at5l'", "/media/ig/segway-quad-card.jpg");
     }
     return;
   }

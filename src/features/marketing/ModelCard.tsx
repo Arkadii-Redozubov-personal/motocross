@@ -6,7 +6,7 @@ import type { Locale } from "@/shared/i18n/config";
 import type { Dict } from "@/shared/i18n/dictionaries/pl";
 
 const POS: Record<string, string> = {
-  "segway-at5l": "50% 25%",
+  "segway-at5l": "50% 50%",
   "tgb-4x4": "30% 60%",
   "enduro-250": "50% 55%",
   "enduro-standard": "50% 55%",

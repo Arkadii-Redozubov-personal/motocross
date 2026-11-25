@@ -13,7 +13,18 @@ export function Hero({ d, locale, site }: { d: Dict; locale: Locale; site: Site 
   const today = todayWarsawYmd();
   return (
     <section className="relative overflow-hidden bg-obsidian">
-      <Contours className="pointer-events-none absolute -left-1/4 -top-1/4 h-[150%] w-[150%] text-amber opacity-[0.13]" seed={2} />
+      <div className="pointer-events-none absolute inset-0 lg:hidden" aria-hidden="true">
+        <Image
+          src="/media/ig/fleet-pinned-cover.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[50%_22%]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#141518]/80 via-[#1c1d21]/76 to-[#1c1d21]/95" />
+      </div>
+      <Contours className="pointer-events-none hidden -left-1/4 -top-1/4 h-[150%] w-[150%] text-amber opacity-[0.13] lg:absolute lg:block" seed={2} />
       <div className="relative mx-auto grid max-w-7xl gap-10 px-4 pb-16 pt-10 sm:px-6 lg:grid-cols-12 lg:gap-8 lg:pb-24 lg:pt-16">
         <div className="lg:col-span-7">
           <div className="rise">
@@ -22,13 +33,13 @@ export function Hero({ d, locale, site }: { d: Dict; locale: Locale; site: Site 
           <p className="rise rise-2 mt-6 max-w-xl text-lg text-fg-2 sm:text-xl">{sub}</p>
           <ul className="rise rise-2 mt-6 flex flex-wrap gap-2.5">
             {d.hero.pills.map((pill) => (
-              <li key={pill} className="inline-flex items-center gap-2 rounded-ctl border border-line bg-card px-3 py-1.5 text-sm text-fg-2">
+              <li key={pill} className="inline-flex items-center gap-2 rounded-ctl border border-line bg-card/90 px-3 py-1.5 text-sm text-fg-2">
                 <Check size={14} className="shrink-0 text-amber" aria-hidden="true" />
                 <span>{pill}</span>
               </li>
             ))}
           </ul>
-          <form action="/booking" method="get" className="rise rise-3 mt-8 grid max-w-2xl gap-3 border border-line bg-card p-4 sm:grid-cols-[1fr_1fr_auto] sm:items-end" aria-label={d.hero.check}>
+          <form action="/booking" method="get" className="rise rise-3 mt-8 grid max-w-2xl gap-3 border border-line bg-card/95 p-4 sm:grid-cols-[1fr_1fr_auto] sm:items-end" aria-label={d.hero.check}>
             <div>
               <label htmlFor="hero-date" className="label">{d.hero.date}</label>
               <input id="hero-date" name="date" type="date" min={today} className="field num" />
@@ -47,15 +58,15 @@ export function Hero({ d, locale, site }: { d: Dict; locale: Locale; site: Site 
             </button>
           </form>
         </div>
-        <div className="relative mx-auto w-full max-w-md lg:col-span-5 lg:max-w-none">
-          <div className="cut relative aspect-[4/5] w-full overflow-hidden bg-card sm:aspect-[3/4]">
+        <div className="relative hidden lg:col-span-5 lg:block">
+          <div className="cut relative aspect-[3/4] w-full overflow-hidden bg-card">
             <Image src="/media/ig/fleet-pinned-cover.jpg" alt={d.hero.imgAlt} fill priority sizes="(min-width:1024px) 40vw, 90vw" className="object-cover object-top" />
             <div className="absolute inset-0 bg-gradient-to-t from-obsidian/60 via-transparent to-transparent" aria-hidden="true" />
           </div>
-          <div className="cut-sm absolute -bottom-6 left-0 hidden aspect-square w-[42%] overflow-hidden border-4 border-obsidian bg-card sm:block lg:-left-10">
+          <div className="cut-sm absolute -bottom-6 -left-10 aspect-square w-[42%] overflow-hidden border-4 border-obsidian bg-card">
             <Image src="/media/ig/asix-88-profile.jpg" alt={d.hero.imgAlt2} fill sizes="(min-width:1024px) 18vw, 40vw" className="object-cover" />
           </div>
-          <div className="absolute -bottom-3 right-0 hidden rounded-ctl border border-obsidian bg-amber px-4 py-3 text-ink sm:block lg:-right-4">
+          <div className="absolute -bottom-3 -right-4 rounded-ctl border border-obsidian bg-amber px-4 py-3 text-ink">
             <p className="num font-display text-3xl font-bold leading-none">{d.hero.badgeNum}</p>
             <p className="mt-1 font-display text-xs font-bold uppercase tracking-wider">{d.hero.badgeText}</p>
             <p className="mt-0.5 text-xs font-semibold opacity-80">{d.hero.badgeSub}</p>
