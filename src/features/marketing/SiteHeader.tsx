@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Clock, Instagram, MapPin, Menu, Phone, X } from "lucide-react";
 import { Wordmark, formatPhoneHref } from "./ui";
 import { LangSwitch } from "./LangSwitch";
@@ -19,9 +19,19 @@ export function SiteHeader({ d, locale, phone, instagramUrl }: { d: Dict; locale
     ["/contact", d.nav.contacts],
   ];
   const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
+
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-obsidian">
-      <div className="hidden border-b border-line bg-[#151619] text-xs text-fg-2 md:block">
+      <div className="relative z-50 hidden border-b border-line bg-[#151619] text-xs text-fg-2 md:block">
         <div className="mx-auto flex h-9 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
           <div className="flex items-center gap-6">
             <a href={formatPhoneHref(phone)} className="num flex items-center gap-1.5 font-semibold text-fg transition-colors hover:text-amber">
@@ -45,7 +55,7 @@ export function SiteHeader({ d, locale, phone, instagramUrl }: { d: Dict; locale
           )}
         </div>
       </div>
-      <div className="mx-auto flex h-[68px] max-w-7xl items-center gap-2 px-3 sm:h-[72px] sm:gap-3 sm:px-6 lg:gap-4">
+      <div className="relative z-50 mx-auto flex h-[68px] max-w-7xl items-center gap-2 bg-obsidian px-3 sm:h-[72px] sm:gap-3 sm:px-6 lg:gap-4">
         <Link href="/" className="shrink-0 py-1" aria-label="MOTOCROSS WRO">
           <Wordmark />
         </Link>
@@ -92,36 +102,47 @@ export function SiteHeader({ d, locale, phone, instagramUrl }: { d: Dict; locale
         </div>
       </div>
       {open && (
-        <nav id="mobile-nav" aria-label="Mobile" className="border-t border-line bg-slate-deep xl:hidden">
-          <div className="mx-auto flex max-w-7xl items-center justify-between border-b border-line px-4 py-3 sm:hidden">
-            <span className="text-sm font-semibold text-fg-2">{d.common.langLabel}</span>
-            <LangSwitch locale={locale} label={d.common.langLabel} />
-          </div>
-          <ul className="mx-auto max-w-7xl px-4 py-2 sm:px-6">
-            {links.map(([href, label]) => {
-              const active = isActive(href);
-              return (
-                <li key={href}>
-                  <Link
-                    href={href}
-                    aria-current={active ? "page" : undefined}
-                    onClick={() => setOpen(false)}
-                    className={`block border-b border-line py-3.5 font-display text-lg font-medium uppercase tracking-wider ${
-                      active ? "text-amber" : "text-fg"
-                    }`}
-                  >
-                    {label}
-                  </Link>
-                </li>
-              );
-            })}
-            <li>
-              <a href={formatPhoneHref(phone)} className="num flex items-center gap-2 py-3.5 font-display text-lg font-semibold text-amber">
-                <Phone size={18} aria-hidden="true" /> {phone}
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <>
+          <div
+            className="fixed inset-0 z-40 bg-black/55 xl:hidden"
+            aria-hidden="true"
+            onClick={() => setOpen(false)}
+          />
+          <nav
+            id="mobile-nav"
+            aria-label="Mobile"
+            className="absolute inset-x-0 top-full z-50 border-b border-line bg-slate-deep shadow-2xl xl:hidden"
+          >
+            <div className="mx-auto flex max-w-7xl items-center justify-between border-b border-line px-4 py-3 sm:hidden">
+              <span className="text-sm font-semibold text-fg-2">{d.common.langLabel}</span>
+              <LangSwitch locale={locale} label={d.common.langLabel} />
+            </div>
+            <ul className="mx-auto max-w-7xl px-4 py-2 sm:px-6">
+              {links.map(([href, label]) => {
+                const active = isActive(href);
+                return (
+                  <li key={href}>
+                    <Link
+                      href={href}
+                      aria-current={active ? "page" : undefined}
+                      onClick={() => setOpen(false)}
+                      className={`block border-b border-line py-3.5 font-display text-lg font-medium uppercase tracking-wider ${
+                        active ? "text-amber" : "text-fg"
+                      }`}
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                );
+              })}
+              <li>
+                <a href={formatPhoneHref(phone)} className="num flex items-center gap-2 py-3.5 font-display text-lg font-semibold text-amber">
+                  <Phone size={18} aria-hidden="true" /> {phone}
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </>
       )}
     </header>
   );

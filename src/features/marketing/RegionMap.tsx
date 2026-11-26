@@ -59,7 +59,7 @@ export function RegionMap({ d, locale }: { d: Dict; locale: Locale }) {
   return (
     <div className="overflow-hidden rounded-card border border-line bg-card">
       <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line px-4 py-3">
-        <div className="flex flex-wrap items-center gap-2" role="group" aria-label={d.locations.mapLabel}>
+        <div className="grid w-full gap-2 sm:flex sm:w-auto sm:flex-wrap sm:items-center" role="group" aria-label={d.locations.mapLabel}>
           {PRESETS.map((p) => {
             const isActive = p.id === active.id;
             return (

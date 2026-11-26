@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { ArrowRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import { Contours, SplitTitle } from "./ui";
+import { HeroSearchForm } from "./HeroSearchForm";
 import { CtaBand } from "./CtaBand";
 import type { Dict } from "@/shared/i18n/dictionaries/pl";
 import type { Locale } from "@/shared/i18n/config";
@@ -39,24 +40,7 @@ export function Hero({ d, locale, site }: { d: Dict; locale: Locale; site: Site 
               </li>
             ))}
           </ul>
-          <form action="/booking" method="get" className="rise rise-3 mt-8 grid max-w-2xl gap-3 border border-line bg-card/95 p-4 sm:grid-cols-[1fr_1fr_auto] sm:items-end" aria-label={d.hero.check}>
-            <div>
-              <label htmlFor="hero-date" className="label">{d.hero.date}</label>
-              <input id="hero-date" name="date" type="date" min={today} className="field num" />
-            </div>
-            <div>
-              <label htmlFor="hero-cat" className="label">{d.hero.type}</label>
-              <select id="hero-cat" name="category" className="field" defaultValue="">
-                <option value="">{d.hero.any}</option>
-                <option value="quad">{d.hero.quad}</option>
-                <option value="moto">{d.hero.moto}</option>
-              </select>
-            </div>
-            <button type="submit" className="btn btn-amber sm:!px-5">
-              {d.hero.check}
-              <ArrowRight size={18} aria-hidden="true" />
-            </button>
-          </form>
+          <HeroSearchForm d={d} today={today} />
         </div>
         <div className="relative hidden lg:col-span-5 lg:block">
           <div className="cut relative aspect-[3/4] w-full overflow-hidden bg-card">

@@ -124,7 +124,7 @@ export function PricesSection({ d, locale, site, surface = "obsidian" }: { d: Di
                   <tr key={m.id} className="border-b border-line last:border-0">
                     <th scope="row" className="px-3 py-4 text-sm font-semibold sm:px-5 sm:text-base">
                       {m.title[locale]}
-                      {m.beginner && <span className="ml-2 inline-block rounded bg-flame px-1.5 py-0.5 align-middle font-display text-[0.7rem] uppercase tracking-wider text-ink">{d.fleet.beginner}</span>}
+                      {m.beginner && <span className="mt-1 block w-fit whitespace-nowrap rounded bg-flame px-1.5 py-0.5 font-display text-[0.7rem] uppercase tracking-wider text-ink sm:ml-2 sm:mt-0 sm:inline-block sm:align-middle">{d.fleet.beginner}</span>}
                     </th>
                     {durations.map((min) => {
                       const r = m.rates.find((x) => x.duration_min === min);
@@ -331,9 +331,9 @@ export function GallerySection({ d, locale, site, surface = "slate" }: { d: Dict
         <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
           <SplitTitle parts={d.gallery.title} />
           {site.contact.instagramUrl && (
-            <a href={site.contact.instagramUrl} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
-              <Instagram size={18} aria-hidden="true" />
-              {d.gallery.more}
+            <a href={site.contact.instagramUrl} target="_blank" rel="noopener noreferrer" className="btn btn-ghost max-w-full !whitespace-normal py-2.5 text-center leading-tight">
+              <Instagram size={18} className="shrink-0" aria-hidden="true" />
+              <span>{d.gallery.more}</span>
             </a>
           )}
         </div>

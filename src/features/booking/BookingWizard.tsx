@@ -257,7 +257,10 @@ export function BookingWizard(props: { d: Dict; locale: Locale; models: ModelDto
           </div>
           {errors.date && <p id="f-date" tabIndex={-1} className="err">{errors.date}</p>}
           {date && dayInfo && location && (
-            <p className="mt-3 flex items-center gap-2 text-fg-2"><MapPin size={18} className="text-amber" aria-hidden="true" />{b.cityOn} <strong className="text-fg">{location.city[locale]}</strong>. {location.address[locale]}</p>
+            <p className="mt-3 flex items-start gap-2 text-sm text-fg-2 sm:text-base">
+              <MapPin size={18} className="mt-0.5 shrink-0 text-amber" aria-hidden="true" />
+              <span>{b.cityOn} <strong className="text-fg">{location.city[locale]}</strong>. {location.address[locale]}</span>
+            </p>
           )}
         </fieldset>
 
