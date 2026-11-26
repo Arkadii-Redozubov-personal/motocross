@@ -59,7 +59,7 @@ const MODELS: ModelSeed[] = [
       "2 места|LED-балка|Привод 4x4|60 мин чистого катания",
     ],
     beginner: false,
-    image: "/media/ig/quad-black-led.webp",
+    image: "/media/ig/quad-black-grass.webp",
     hourly: 250,
     assets: ["QUAD-LED-01"],
   },
@@ -78,7 +78,7 @@ const MODELS: ModelSeed[] = [
       "Для новичков|Топливо и шлем в цене|Инструктор по запросу",
     ],
     beginner: true,
-    image: "/media/ig/moto-beginner-ride.webp",
+    image: "/media/ig/moto-action-weekend.webp",
     hourly: 150,
     assets: ["MOTO-PIT-01", "MOTO-PIT-02", "MOTO-PIT-03"],
   },
@@ -97,7 +97,7 @@ const MODELS: ModelSeed[] = [
       "Honda CRF250R|Полная экипировка в цене|60 мин чистого катания",
     ],
     beginner: false,
-    image: "/media/ig/moto-track-corner.webp",
+    image: "/media/ig/honda-crf-rainbow.webp",
     hourly: 200,
     assets: ["MOTO-HON-01", "MOTO-HON-02", "MOTO-HON-03"],
   },
@@ -116,23 +116,23 @@ const MODELS: ModelSeed[] = [
       "Yamaha Cross|Полная экипировка в цене|Без скрытых доплат",
     ],
     beginner: false,
-    image: "/media/ig/moto-yamaha-pov.webp",
+    image: "/media/ig/moto-3-riders-trail.webp",
     hourly: 200,
     assets: ["MOTO-YAM-01"],
   },
 ];
 
 const GALLERY_SEED = [
+  { src: "/media/ig/moto-weekend-group.webp", alt: { pl: "Trzy motocykle crossowe o zachodzie słońca w @motocross.wro", uk: "Три кросові мотоцикли на заході сонця в @motocross.wro", ru: "Три кроссовых мотоцикла на закате в @motocross.wro" } },
+  { src: "/media/ig/quad-girl-forest.webp", alt: { pl: "Uczestniczka w kasku na dwuosobowym quadzie 4x4 na leśnym szlaku", uk: "Учасниця в шоломі на двомісному квадроциклі 4x4 на лісовій трасі", ru: "Участница в шлеме на двухместном квадроцикле 4x4 на лесной трассе" } },
+  { src: "/media/ig/family-kid-bike.webp", alt: { pl: "Rodzinny wyjazd z dziećmi — uśmiechnięty młody rider na motocyklu Asix XT 97", uk: "Сімейний виїзд із дітьми — усміхнений юний райдер на мотоциклі Asix XT 97", ru: "Семейный выезд с детьми — улыбчивый юный райдер на мотоцикле Asix XT 97" } },
+  { src: "/media/ig/honda-crf-rainbow.webp", alt: { pl: "Motocykl crossowy Honda CRF250R po deszczu z tęczą na horyzoncie", uk: "Кросовий мотоцикл Honda CRF250R на маршруті з веселкою", ru: "Кроссовый мотоцикл Honda CRF250R на маршруте с радугой" } },
+  { src: "/media/ig/moto-3-riders-trail.webp", alt: { pl: "Motocykl crossowy Yamaha #66 i trójka kierowców na leśnej polanie", uk: "Кросовий мотоцикл Yamaha #66 та райдери на трасі біля Вроцлава", ru: "Кроссовый мотоцикл Yamaha #66 и райдеры на трассе под Вроцлавом" } },
+  { src: "/media/ig/quad-black-grass.webp", alt: { pl: "Dwuosobowy quad terenowy 4x4 gotowy do jazdy na polanie", uk: "Двомісний позашляховий квадроцикл 4x4 готовий до виїзду", ru: "Двухместный внедорожный квадроцикл 4x4 готов к выезду" } },
   { src: "/media/ig/hero-fleet-lineup.webp", alt: { pl: "Ekipa @motocross.wro: motocykle crossowe Honda, Yamaha i quad 4x4", uk: "Техніка @motocross.wro: кросові мотоцикли Honda, Yamaha та квадроцикл", ru: "Техника @motocross.wro: кроссовые мотоциклы Honda, Yamaha и квадроцикл" } },
-  { src: "/media/ig/quad-sand-quarry.webp", alt: { pl: "Jazda quadem po stromych wydmach kopalni piasku", uk: "Поїздка квадроциклом піщаним кар'єром", ru: "Поездка на квадроцикле по песчаному карьеру" } },
-  { src: "/media/ig/moto-track-corner.webp", alt: { pl: "Motocykl crossowy w zakręcie na piaszczystej trasie", uk: "Кросовий мотоцикл у повороті на ґрунтовій трасі", ru: "Кроссовый мотоцикл в повороте на грунтовой трассе" } },
-  { src: "/media/ig/quad-kymco-4x4.webp", alt: { pl: "Dwuosobowy quad KYMCO 4x4 gotowy na wyjazd", uk: "Двомісний квадроцикл KYMCO 4x4 готовий до виїзду", ru: "Двухместный квадроцикл KYMCO 4x4 готов к выезду" } },
-  { src: "/media/ig/moto-wheelie-quarry.webp", alt: { pl: "Jazda na tylnym kole na piasku w @motocross.wro", uk: "Віллі на кросовому мотоциклі в піщаному кар'єрі", ru: "Вилли на кроссовом мотоцикле в песчаном карьере" } },
-  { src: "/media/ig/quad-couple-autumn.webp", alt: { pl: "Przejażdżka we dwoje na quadzie jesiennymi szlakami", uk: "Катання вдвох на двомісному квадроциклі осіннім лісом", ru: "Катание вдвоём на двухместном квадроцикле по осеннему лесу" } },
-  { src: "/media/ig/moto-3-riders-trail.webp", alt: { pl: "Trzech motocyklistów na weekendowej trasie pod Wrocławiem", uk: "Троє райдерів на вихідних на трасі біля Вроцлава", ru: "Трое райдеров на трассе под Вроцлавом в выходные" } },
+  { src: "/media/ig/quad-kymco-4x4.webp", alt: { pl: "Dwuosobowy quad KYMCO 4x4 z kufrem bagażowym", uk: "Двомісний квадроцикл KYMCO 4x4 із багажним кофром", ru: "Двухместный квадроцикл KYMCO 4x4 с багажным кофром" } },
   { src: "/media/ig/quad-quarry-bw.webp", alt: { pl: "Uczestniczka na quadzie 4x4 z belką LED na kopalni piasku", uk: "Учасниця на квадроциклі з LED-балкою в піщаному кар'єрі", ru: "Участница на квадроцикле с LED-балкой в песчаном карьере" } },
-  { src: "/media/ig/moto-meadow-ride.webp", alt: { pl: "Wyjazd krosem przez zieloną łąkę i leśną polanę", uk: "Виїзд на кросі зеленим полем біля лісу", ru: "Выезд на кроссе по зелёному полю у леса" } },
-  { src: "/media/ig/moto-weekend-group.webp", alt: { pl: "Weekendowy trening grupowy @motocross.wro", uk: "Вихідний заїзд із друзями в @motocross.wro", ru: "Выходной заезд с друзьями в @motocross.wro" } },
+  { src: "/media/ig/moto-quarry-dunes.webp", alt: { pl: "Podjazdy pod piaszczyste wydmy na sobotniej kopalni piasku", uk: "Підйоми піщаними дюнами на суботньому кар'єрі", ru: "Подъёмы по песчаным дюнам на субботнем карьере" } },
 ];
 
 function clearSeedTables(db: DatabaseSync) {
@@ -168,6 +168,16 @@ export function seedIfEmpty(db: DatabaseSync) {
         db.exec("ROLLBACK");
         throw e;
       }
+      return;
+    }
+    // Idempotent upgrade to higher-res Instagram photos for existing DBs.
+    const yamaha = one<{ image_url: string }>(db, "SELECT image_url FROM vehicle_models WHERE slug = 'yamaha-cross-250'");
+    if (yamaha?.image_url === "/media/ig/moto-yamaha-pov.webp") {
+      for (const m of MODELS) {
+        if (pub(m.image)) run(db, "UPDATE vehicle_models SET image_url = ? WHERE slug = ?", m.image, m.slug);
+      }
+      const nextGallery = GALLERY_SEED.filter((x) => pub(x.src)).map((x, i) => ({ id: `g${i + 1}`, visible: true, ...x }));
+      run(db, "UPDATE site_settings SET value_json = ?, updated_at_utc = ? WHERE key = 'gallery'", JSON.stringify(nextGallery), now());
     }
     return;
   }

@@ -21,9 +21,9 @@ export default async function PrivacyPage() {
       <PageBanner
         title={d.privacy.title}
         lead={d.footer.note}
-        image="/media/ig/quad-forest-trail.webp"
+        image="/media/ig/moto-weekend-group.webp"
         imageAlt={d.privacy.metaTitle}
-        imagePosition="50% 50%"
+        imagePosition="50% 62%"
       />
       <section className="surface-light py-14 lg:py-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">

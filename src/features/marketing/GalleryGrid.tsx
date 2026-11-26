@@ -94,7 +94,7 @@ export function GalleryGrid({ items, d, locale }: { items: GalleryItem[]; d: Dic
                   alt={g.alt[locale]}
                   fill
                   sizes="(min-width:1024px) 25vw, 48vw"
-                  className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                  className={`object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03] ${g.src.includes("quad-girl") || g.src.includes("family-kid") || g.src.includes("quad-quarry-bw") ? "object-top" : "object-center"}`}
                 />
               </button>
             </li>

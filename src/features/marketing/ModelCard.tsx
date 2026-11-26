@@ -7,9 +7,9 @@ import type { Dict } from "@/shared/i18n/dictionaries/pl";
 
 const POS: Record<string, string> = {
   "quad-kymco-4x4": "50% 50%",
-  "quad-4x4-led": "50% 50%",
-  "pitbike-start": "50% 45%",
-  "honda-crf250r": "50% 45%",
+  "quad-4x4-led": "50% 55%",
+  "pitbike-start": "50% 42%",
+  "honda-crf250r": "50% 55%",
   "yamaha-cross-250": "50% 50%",
 };
 

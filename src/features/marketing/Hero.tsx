@@ -15,12 +15,12 @@ export function Hero({ d, locale, site }: { d: Dict; locale: Locale; site: Site 
     <section className="relative overflow-hidden bg-obsidian">
       <div className="pointer-events-none absolute inset-0 lg:hidden" aria-hidden="true">
         <Image
-          src="/media/ig/hero-fleet-lineup.webp"
+          src="/media/ig/moto-weekend-group.webp"
           alt=""
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[50%_55%]"
+          className="object-cover object-[50%_60%]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#141518]/80 via-[#1c1d21]/76 to-[#1c1d21]/95" />
       </div>
@@ -60,7 +60,7 @@ export function Hero({ d, locale, site }: { d: Dict; locale: Locale; site: Site 
         </div>
         <div className="relative hidden lg:col-span-5 lg:block">
           <div className="cut relative aspect-[3/4] w-full overflow-hidden bg-card">
-            <Image src="/media/ig/hero-fleet-lineup.webp" alt={d.hero.imgAlt} fill priority sizes="(min-width:1024px) 40vw, 90vw" className="object-cover object-center" />
+            <Image src="/media/ig/moto-weekend-group.webp" alt={d.hero.imgAlt} fill priority sizes="(min-width:1024px) 40vw, 90vw" className="object-cover object-center" />
             <div className="absolute inset-0 bg-gradient-to-t from-obsidian/60 via-transparent to-transparent" aria-hidden="true" />
           </div>
           <div className="cut-sm absolute -bottom-6 -left-10 aspect-square w-[42%] overflow-hidden border-4 border-obsidian bg-card">
