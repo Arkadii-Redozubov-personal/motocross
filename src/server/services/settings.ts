@@ -2,7 +2,7 @@ import type { DatabaseSync } from "node:sqlite";
 import { one, run } from "../db/client";
 
 export type L3 = { pl: string; uk: string; ru: string };
-export type Contact = { phone: string; email: string; ownerEmail: string; instagramUrl: string; facebookUrl: string };
+export type Contact = { phone: string; email: string; ownerEmail: string; instagramUrl: string; facebookUrl: string; telegramUrl: string };
 export type BookingSettings = { slotStepMin: number; minLeadMin: number; horizonDays: number };
 export type Texts = { heroTitle: L3; heroSubtitle: L3 };
 export type Promo = { enabled: boolean; title: L3; body: L3 };
@@ -18,7 +18,7 @@ export type SettingsMap = {
 
 const EMPTY3: L3 = { pl: "", uk: "", ru: "" };
 const DEFAULTS: SettingsMap = {
-  contact: { phone: "", email: "", ownerEmail: "", instagramUrl: "", facebookUrl: "" },
+  contact: { phone: "", email: "", ownerEmail: "", instagramUrl: "", facebookUrl: "", telegramUrl: "" },
   booking: { slotStepMin: 60, minLeadMin: 60, horizonDays: 90 },
   texts: { heroTitle: EMPTY3, heroSubtitle: EMPTY3 },
   promo: { enabled: false, title: EMPTY3, body: EMPTY3 },

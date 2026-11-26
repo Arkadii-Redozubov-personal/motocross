@@ -44,8 +44,8 @@ export function GalleryGrid({ items, d, locale }: { items: GalleryItem[]; d: Dic
             <div className="relative aspect-[9/16] w-full bg-card-2">
               <video
                 ref={vidRef}
-                src="/media/ig/reel-quad-trail.mp4"
-                poster="/media/ig/reel-quad-poster.webp"
+                src="/media/ig/reel-motocross-wro.mp4"
+                poster="/media/ig/moto-track-corner.webp"
                 playsInline
                 loop
                 muted={muted}
@@ -94,7 +94,7 @@ export function GalleryGrid({ items, d, locale }: { items: GalleryItem[]; d: Dic
                   alt={g.alt[locale]}
                   fill
                   sizes="(min-width:1024px) 25vw, 48vw"
-                  className={`object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03] ${g.src.includes("fleet-pinned") || g.src.includes("rider-raven") ? "object-top" : "object-center"}`}
+                  className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                 />
               </button>
             </li>

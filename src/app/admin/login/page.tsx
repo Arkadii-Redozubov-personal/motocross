@@ -41,7 +41,7 @@ export default function AdminLoginPage() {
           </span>
           <div>
             <h1 className="text-xl font-bold">Вхід у панель власника</h1>
-            <p className="text-sm text-fg-3">MOTO/QUAD TEREN</p>
+            <p className="text-sm text-fg-3">MOTOCROSS WRO</p>
           </div>
         </div>
         {err && (

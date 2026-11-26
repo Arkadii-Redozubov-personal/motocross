@@ -21,7 +21,7 @@ export default async function PrivacyPage() {
       <PageBanner
         title={d.privacy.title}
         lead={d.footer.note}
-        image="/media/ig/quad-forest-ride.webp"
+        image="/media/ig/quad-forest-trail.webp"
         imageAlt={d.privacy.metaTitle}
         imagePosition="50% 50%"
       />

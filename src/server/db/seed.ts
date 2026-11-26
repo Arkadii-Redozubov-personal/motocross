@@ -26,211 +26,241 @@ type ModelSeed = {
 
 const MODELS: ModelSeed[] = [
   {
-    slug: "segway-at5l",
+    slug: "quad-kymco-4x4",
     category: "quad",
-    title: ["Segway Snarler AT5L", "Segway Snarler AT5L", "Segway Snarler AT5L"],
+    title: ["Quad KYMCO 4x4 (2-os.)", "Квадроцикл KYMCO 4x4 (двомісний)", "Квадроцикл KYMCO 4x4 (двухместный)"],
     desc: [
-      "Dwuosobowy quad ze wspomaganiem kierownicy EPS. Jedziesz sam albo z pasażerem.",
-      "Двомісний квадроцикл з підсилювачем керма EPS. Їдеш сам або з пасажиром.",
-      "Двухместный квадроцикл с усилителем руля EPS. Едете сами или с пассажиром.",
+      "Wygodny dwuosobowy quad przeprawowy KYMCO z kufrem. Paliwo, kask i pełne wyposażenie w cenie.",
+      "Зручний двомісний квадроцикл KYMCO з кофром. Пальне, шолом та повне екіпірування включені у вартість.",
+      "Удобный двухместный квадроцикл KYMCO с кофром. Топливо, шлем и полная экипировка включены в цену.",
     ],
     specs: [
-      "Wspomaganie kierownicy EPS|2 miejsca|Wyciągarka z przodu|Napęd 4x4",
-      "Підсилювач керма EPS|2 місця|Лебідка спереду|Привід 4x4",
-      "Усилитель руля EPS|2 места|Лебёдка спереди|Привод 4x4",
+      "2 miejsca|Kufer bagażowy|Paliwo i strój w cenie|Bez prawa jazdy",
+      "2 місця|Багажний кофр|Пальне та екіпірування в ціні|Без водійських прав",
+      "2 места|Багажный кофр|Топливо и экипировка в цене|Без водительских прав",
     ],
     beginner: false,
-    image: "/media/ig/segway-quad-card.webp",
+    image: "/media/ig/quad-kymco-4x4.webp",
     hourly: 250,
-    assets: ["QUAD-SEG-01", "QUAD-SEG-02", "QUAD-SEG-03"],
+    assets: ["QUAD-KYM-01", "QUAD-KYM-02", "QUAD-KYM-03"],
   },
   {
-    slug: "tgb-4x4",
+    slug: "quad-4x4-led",
     category: "quad",
-    title: ["Quad terenowy TGB 4x4", "Квадроцикл TGB 4x4", "Квадроцикл TGB 4x4"],
+    title: ["Quad terenowy 4x4 LED (2-os.)", "Позашляховий квадроцикл 4x4 LED (2-місний)", "Внедорожный квадроцикл 4x4 LED (2-местный)"],
     desc: [
-      "Terenowy quad do jazdy po błocie, piachu i leśnych drogach.",
-      "Позашляховий квадроцикл для бруду, піску та лісових доріг.",
-      "Внедорожный квадроцикл для грязи, песка и лесных дорог.",
+      "Mocny dwuosobowy quad z belką LED na strome podjazdy kopalni piasku i trasy leśne.",
+      "Потужний двомісний квадроцикл із LED-балкою для піщаних кар'єрів і лісових маршрутів.",
+      "Мощный двухместный квадроцикл с LED-балкой для песчаных карьеров и лесных маршрутов.",
     ],
     specs: [
-      "Napęd 4x4|Listwa LED|Opony terenowe|Kufer bagażowy",
-      "Привід 4x4|LED-балка|Позашляхові шини|Багажний кофр",
-      "Привод 4x4|LED-балка|Внедорожные шины|Багажный кофр",
+      "2 miejsca|Belka LED|Napęd 4x4|60 min czystej jazdy",
+      "2 місця|LED-балка|Привід 4x4|60 хв фактичного катання",
+      "2 места|LED-балка|Привод 4x4|60 мин чистого катания",
     ],
     beginner: false,
-    image: "/media/client/quads-terrain.webp",
+    image: "/media/ig/quad-black-led.webp",
     hourly: 250,
-    assets: ["QUAD-TGB-01"],
+    assets: ["QUAD-LED-01"],
   },
   {
-    slug: "enduro-250",
+    slug: "pitbike-start",
     category: "moto",
-    title: ["Motocykl enduro 250 cm³ Economy", "Мотоцикл ендуро 250 см³ Економ", "Мотоцикл эндуро 250 см³ Эконом"],
+    title: ["Pitbike 150 (Dla początkujących)", "Пітбайк (для початківців)", "Питбайк (для новичков)"],
     desc: [
-      "Lekki motocykl enduro na polne drogi, las i kopalnię piasku.",
-      "Легкий мотоцикл ендуро для польових доріг, лісу та піщаного кар'єру.",
-      "Лёгкий мотоцикл эндуро для полевых дорог, леса и песчаного карьера.",
+      "Lekki i zwinny pitbike idealny na pierwszy raz oraz dla młodzieży. Uczymy od zera przed wyjazdem.",
+      "Легкий і маневровий пітбайк — ідеально для першого разу та підлітків. Навчаємо з нуля перед виїздом.",
+      "Лёгкий и манёвренный питбайк — идеально для первого раза и подростков. Учим с нуля перед выездом.",
     ],
-    specs: ["250 cm³|Lekka rama|Opony terenowe", "250 см³|Легка рама|Позашляхові шини", "250 см³|Лёгкая рама|Внедорожные шины"],
-    beginner: false,
-    image: "/media/ig/asix-88-profile.webp",
-    hourly: 150,
-    assets: ["MOTO-250-01", "MOTO-250-02", "MOTO-250-03"],
-  },
-  {
-    slug: "enduro-standard",
-    category: "moto",
-    title: ["Motocykl enduro Standard", "Мотоцикл ендуро Стандарт", "Мотоцикл эндуро Стандарт"],
-    desc: [
-      "Mocniejszy motocykl dla osób, które jeździły już w terenie.",
-      "Потужніший мотоцикл для тих, хто вже катався бездоріжжям.",
-      "Более мощный мотоцикл для тех, кто уже ездил по бездорожью.",
+    specs: [
+      "Dla początkujących|Paliwo i kask w cenie|Instruktor na życzenie",
+      "Для початківців|Пальне та екіпірування в ціні|Інструктор за потреби",
+      "Для новичков|Топливо и шлем в цене|Инструктор по запросу",
     ],
-    specs: ["Klasa Standard|Opony terenowe|Dla jeżdżących w terenie", "Клас Стандарт|Позашляхові шини|Для досвідчених", "Класс Стандарт|Внедорожные шины|Для опытных"],
-    beginner: false,
-    image: "/media/ig/quarry-4-riders.webp",
-    hourly: 200,
-    assets: ["MOTO-STD-01", "MOTO-STD-02", "MOTO-STD-03"],
-  },
-  {
-    slug: "enduro-300-start",
-    category: "moto",
-    title: ["Motocykl enduro 300 cm³ Start", "Мотоцикл ендуро 300 см³ Старт", "Мотоцикл эндуро 300 см³ Старт"],
-    desc: [
-      "Nowszy motocykl 300 cm³ – wybór dla początkujących. Na placu uczysz się od zera.",
-      "Новіший мотоцикл 300 см³ — вибір для початківців. На майданчику вчимо з нуля.",
-      "Более новый мотоцикл 300 см³ — выбор для новичков. На площадке учим с нуля.",
-    ],
-    specs: ["300 cm³|Nowszy model|Nauka na placu przed trasą", "300 см³|Новіша модель|Навчання на майданчику перед трасою", "300 см³|Более новая модель|Обучение на площадке перед трассой"],
     beginner: true,
-    image: "/media/ig/enduro-300-beginner.webp",
-    hourly: 250,
-    assets: ["MOTO-300-01"],
+    image: "/media/ig/moto-beginner-ride.webp",
+    hourly: 150,
+    assets: ["MOTO-PIT-01", "MOTO-PIT-02", "MOTO-PIT-03"],
+  },
+  {
+    slug: "honda-crf250r",
+    category: "moto",
+    title: ["Krosowy Honda CRF250R", "Кросовий Honda CRF250R", "Кроссовый Honda CRF250R"],
+    desc: [
+      "Kultowy motocykl crossowy Honda CRF250R na piaszczyste podjazdy, poligon i szybkie zakręty.",
+      "Кросовий мотоцикл Honda CRF250R для піщаних підйомів, полігону та динамічних поворотів.",
+      "Кроссовый мотоцикл Honda CRF250R для песчаных подъёмов, полигона и динамичных поворотов.",
+    ],
+    specs: [
+      "Honda CRF250R|Ochrona i buty w cenie|60 min faktycznej jazdy",
+      "Honda CRF250R|Повне екіпірування в ціні|60 хв фактичного катання",
+      "Honda CRF250R|Полная экипировка в цене|60 мин чистого катания",
+    ],
+    beginner: false,
+    image: "/media/ig/moto-track-corner.webp",
+    hourly: 200,
+    assets: ["MOTO-HON-01", "MOTO-HON-02", "MOTO-HON-03"],
+  },
+  {
+    slug: "yamaha-cross-250",
+    category: "moto",
+    title: ["Krosowy Yamaha YZ/WR", "Кросовий мотоцикл Yamaha", "Кроссовый мотоцикл Yamaha"],
+    desc: [
+      "Sprawdzony motocykl crossowy Yamaha do jazdy po leśnych ścieżkach i piachu pod Wrocławiem.",
+      "Перевірений кросовий мотоцикл Yamaha для лісових трас і піску поблизу Вроцлава.",
+      "Проверенный кроссовый мотоцикл Yamaha для лесных трасс и песка под Вроцлавом.",
+    ],
+    specs: [
+      "Yamaha Cross|Pełne wyposażenie w cenie|Bez dopłat",
+      "Yamaha Cross|Повне екіпірування в ціні|Без прихованих доплат",
+      "Yamaha Cross|Полная экипировка в цене|Без скрытых доплат",
+    ],
+    beginner: false,
+    image: "/media/ig/moto-yamaha-pov.webp",
+    hourly: 200,
+    assets: ["MOTO-YAM-01"],
   },
 ];
 
 const GALLERY_SEED = [
-  { src: "/media/ig/quarry-4-riders.webp", alt: { pl: "Czterech kierowców enduro na kopalni piasku", uk: "Четверо райдерів ендуро в піщаному кар'єрі", ru: "Четверо райдеров эндуро в песчаном карьере" } },
-  { src: "/media/ig/segway-trail-action.webp", alt: { pl: "Widok z kierownicy quada Segway na leśnej ścieżce", uk: "Вигляд із керма квадроцикла Segway на лісовій стежці", ru: "Вид с руля квадроцикла Segway на лесной тропе" } },
-  { src: "/media/ig/enduro-pov-forest.webp", alt: { pl: "Jazda enduro leśnym szlakiem pod Wrocławiem", uk: "Поїздка на ендуро лісовою трасою біля Вроцлава", ru: "Поездка на эндуро по лесной трассе под Вроцлавом" } },
-  { src: "/media/ig/fleet-pinned-cover.webp", alt: { pl: "Kierowca w kasku na pomarańczowym quadzie Segway AT5L", uk: "Райдер у шоломі на помаранчевому квадроциклі Segway AT5L", ru: "Райдер в шлеме на оранжевом квадроцикле Segway AT5L" } },
-  { src: "/media/ig/enduro-lineup.webp", alt: { pl: "Motocykle ASIX Enduro przygotowane do jazdy", uk: "Мотоцикли ASIX Enduro готові до виїзду", ru: "Мотоциклы ASIX Enduro готовы к выезду" } },
-  { src: "/media/ig/rider-raven-helmet.webp", alt: { pl: "Uczestniczka jazdy w kasku Raven i rękawicach", uk: "Учасниця поїздки у шоломі Raven та рукавицях", ru: "Участница поездки в шлеме Raven и перчатках" } },
-  { src: "/media/ig/quad-forest-ride.webp", alt: { pl: "Ślady opon na piaszczystym poligonie", uk: "Сліди шин на піщаному полігоні", ru: "Следы шин на песчаном полигоне" } },
-  { src: "/media/client/quads-terrain.webp", alt: { pl: "Dwa quady terenowe na błotnistym placu we mgle", uk: "Два квадроцикли на брудному майданчику в тумані", ru: "Два квадроцикла на грязной площадке в тумане" } },
-  { src: "/media/ig/forest-river-tour.webp", alt: { pl: "Leśna rzeka na trasie wyprawowej pod Świdnicą", uk: "Лісова річка на маршруті під Свідницею", ru: "Лесная речка на маршруте под Свидницей" } },
-  { src: "/media/ig/asix-88-profile.webp", alt: { pl: "Motocykl enduro ASIX 250 cm³ w kolorze limonkowym", uk: "Мотоцикл ендуро ASIX 250 см³ лаймового кольору", ru: "Мотоцикл эндуро ASIX 250 см³ лаймового цвета" } },
+  { src: "/media/ig/hero-fleet-lineup.webp", alt: { pl: "Ekipa @motocross.wro: motocykle crossowe Honda, Yamaha i quad 4x4", uk: "Техніка @motocross.wro: кросові мотоцикли Honda, Yamaha та квадроцикл", ru: "Техника @motocross.wro: кроссовые мотоциклы Honda, Yamaha и квадроцикл" } },
+  { src: "/media/ig/quad-sand-quarry.webp", alt: { pl: "Jazda quadem po stromych wydmach kopalni piasku", uk: "Поїздка квадроциклом піщаним кар'єром", ru: "Поездка на квадроцикле по песчаному карьеру" } },
+  { src: "/media/ig/moto-track-corner.webp", alt: { pl: "Motocykl crossowy w zakręcie na piaszczystej trasie", uk: "Кросовий мотоцикл у повороті на ґрунтовій трасі", ru: "Кроссовый мотоцикл в повороте на грунтовой трассе" } },
+  { src: "/media/ig/quad-kymco-4x4.webp", alt: { pl: "Dwuosobowy quad KYMCO 4x4 gotowy na wyjazd", uk: "Двомісний квадроцикл KYMCO 4x4 готовий до виїзду", ru: "Двухместный квадроцикл KYMCO 4x4 готов к выезду" } },
+  { src: "/media/ig/moto-wheelie-quarry.webp", alt: { pl: "Jazda na tylnym kole na piasku w @motocross.wro", uk: "Віллі на кросовому мотоциклі в піщаному кар'єрі", ru: "Вилли на кроссовом мотоцикле в песчаном карьере" } },
+  { src: "/media/ig/quad-couple-autumn.webp", alt: { pl: "Przejażdżka we dwoje na quadzie jesiennymi szlakami", uk: "Катання вдвох на двомісному квадроциклі осіннім лісом", ru: "Катание вдвоём на двухместном квадроцикле по осеннему лесу" } },
+  { src: "/media/ig/moto-3-riders-trail.webp", alt: { pl: "Trzech motocyklistów na weekendowej trasie pod Wrocławiem", uk: "Троє райдерів на вихідних на трасі біля Вроцлава", ru: "Трое райдеров на трассе под Вроцлавом в выходные" } },
+  { src: "/media/ig/quad-quarry-bw.webp", alt: { pl: "Uczestniczka na quadzie 4x4 z belką LED na kopalni piasku", uk: "Учасниця на квадроциклі з LED-балкою в піщаному кар'єрі", ru: "Участница на квадроцикле с LED-балкой в песчаном карьере" } },
+  { src: "/media/ig/moto-meadow-ride.webp", alt: { pl: "Wyjazd krosem przez zieloną łąkę i leśną polanę", uk: "Виїзд на кросі зеленим полем біля лісу", ru: "Выезд на кроссе по зелёному полю у леса" } },
+  { src: "/media/ig/moto-weekend-group.webp", alt: { pl: "Weekendowy trening grupowy @motocross.wro", uk: "Вихідний заїзд із друзями в @motocross.wro", ru: "Выходной заезд с друзьями в @motocross.wro" } },
 ];
+
+function clearSeedTables(db: DatabaseSync) {
+  db.exec(`
+    DELETE FROM booking_allocations;
+    DELETE FROM booking_items;
+    DELETE FROM rates;
+    DELETE FROM assets;
+    DELETE FROM vehicle_models;
+    DELETE FROM schedule_exceptions;
+    DELETE FROM schedules;
+    DELETE FROM locations;
+    DELETE FROM addons;
+    DELETE FROM site_settings WHERE key != 'session_secret';
+  `);
+}
 
 export function seedIfEmpty(db: DatabaseSync) {
   const has = one<{ c: number }>(db, "SELECT COUNT(*) AS c FROM locations");
   if (has && has.c > 0) {
-    // Idempotent media upgrade if the DB was first seeded before IG photos were downloaded.
-    const seg = one<{ image_url: string }>(db, "SELECT image_url FROM vehicle_models WHERE slug = 'segway-at5l'");
-    const galRow = one<{ value_json: string }>(db, "SELECT value_json FROM site_settings WHERE key = 'gallery'");
-    const galleryItems = galRow ? (JSON.parse(galRow.value_json) as Array<Record<string, unknown>>) : [];
-    const galLen = galleryItems.length;
-    if ((seg?.image_url === "/media/client/quads-terrain.jpg" || seg?.image_url === "/media/client/quads-terrain.webp") && galLen <= 2) {
-      for (const m of MODELS) {
-        if (pub(m.image)) run(db, "UPDATE vehicle_models SET image_url = ? WHERE slug = ?", m.image, m.slug);
+    // Re-seed automatically if an ephemeral DB still contains old competitor data and has no bookings.
+    const oldModel = one<{ id: number }>(db, "SELECT id FROM vehicle_models WHERE slug = 'segway-at5l'");
+    const contactRow = one<{ value_json: string }>(db, "SELECT value_json FROM site_settings WHERE key = 'contact'");
+    const bookingsCount = one<{ c: number }>(db, "SELECT COUNT(*) AS c FROM bookings")?.c ?? 0;
+    const isCompetitor = Boolean(oldModel) || (contactRow?.value_json.includes("cross_wroclaw") ?? false);
+    if (isCompetitor && bookingsCount === 0) {
+      db.exec("BEGIN");
+      try {
+        clearSeedTables(db);
+        insertFreshSeed(db, { keepAdmin: true });
+        db.exec("COMMIT");
+      } catch (e) {
+        db.exec("ROLLBACK");
+        throw e;
       }
-      const nextGallery = GALLERY_SEED.filter((x) => pub(x.src)).map((x, i) => ({ id: `g${i + 1}`, visible: true, ...x }));
-      run(db, "UPDATE site_settings SET value_json = ?, updated_at_utc = ? WHERE key = 'gallery'", JSON.stringify(nextGallery), now());
-    }
-    if ((seg?.image_url === "/media/ig/fleet-pinned-cover.jpg" || seg?.image_url === "/media/ig/fleet-pinned-cover.webp") && pub("/media/ig/segway-quad-card.webp")) {
-      run(db, "UPDATE vehicle_models SET image_url = ? WHERE slug = 'segway-at5l'", "/media/ig/segway-quad-card.webp");
-    }
-    // Idempotent .jpg -> .webp migration for built-in /media/ assets in existing SQLite DBs.
-    run(db, "UPDATE vehicle_models SET image_url = REPLACE(image_url, '.jpg', '.webp') WHERE image_url LIKE '/media/%.jpg'");
-    if (galleryItems.some((item) => typeof item.src === "string" && /^\/media\/.*\.jpg$/i.test(item.src))) {
-      const migrated = galleryItems.map((item) =>
-        typeof item.src === "string" && /^\/media\/.*\.jpg$/i.test(item.src)
-          ? { ...item, src: item.src.replace(/\.jpg$/i, ".webp") }
-          : item
-      );
-      run(db, "UPDATE site_settings SET value_json = ?, updated_at_utc = ? WHERE key = 'gallery'", JSON.stringify(migrated), now());
     }
     return;
   }
 
   db.exec("BEGIN");
   try {
-    // Locations: Wroclaw on weekdays (+Sunday), Poznan on Saturdays — per client call.
-    run(db, `INSERT INTO locations (slug, city_pl, city_uk, city_ru, address_pl, address_uk, address_ru) VALUES (?,?,?,?,?,?,?)`,
-      "wroclaw", "Wrocław", "Вроцлав", "Вроцлав",
-      "Dokładny adres i dojazd wyślemy po potwierdzeniu rezerwacji.",
-      "Точну адресу та схему проїзду надішлемо після підтвердження бронювання.",
-      "Точный адрес и схему проезда отправим после подтверждения брони.");
-    run(db, `INSERT INTO locations (slug, city_pl, city_uk, city_ru, address_pl, address_uk, address_ru) VALUES (?,?,?,?,?,?,?)`,
-      "poznan", "Poznań", "Познань", "Познань",
-      "Dokładny adres i dojazd wyślemy po potwierdzeniu rezerwacji.",
-      "Точну адресу та схему проїзду надішлемо після підтвердження бронювання.",
-      "Точный адрес и схему проезда отправим после подтверждения брони.");
-    const wro = one<{ id: number }>(db, "SELECT id FROM locations WHERE slug='wroclaw'")!.id;
-    const poz = one<{ id: number }>(db, "SELECT id FROM locations WHERE slug='poznan'")!.id;
-    for (let wd = 0; wd <= 6; wd++) {
-      run(db, "INSERT INTO schedules (location_id, weekday, is_open, open_time, close_time) VALUES (?,?,?,?,?)", wro, wd, wd === 6 ? 0 : 1, "09:00", "18:00");
-      run(db, "INSERT INTO schedules (location_id, weekday, is_open, open_time, close_time) VALUES (?,?,?,?,?)", poz, wd, wd === 6 ? 1 : 0, "09:00", "18:00");
-    }
-
-    let order = 0;
-    for (const m of MODELS) {
-      const image = pub(m.image) ? m.image : "";
-      run(db,
-        `INSERT INTO vehicle_models (slug, category, title_pl, title_uk, title_ru, desc_pl, desc_uk, desc_ru, specs_pl, specs_uk, specs_ru, beginner_flag, image_url, published, sort_order)
-         VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,1,?)`,
-        m.slug, m.category, ...m.title, ...m.desc, ...m.specs, m.beginner ? 1 : 0, image, order++);
-      const id = one<{ id: number }>(db, "SELECT id FROM vehicle_models WHERE slug=?", m.slug)!.id;
-      for (const code of m.assets) run(db, "INSERT INTO assets (code, model_id, location_id, active) VALUES (?,?,NULL,1)", code, id);
-      for (const hours of [1, 2, 3]) run(db, "INSERT INTO rates (model_id, duration_min, amount_pln) VALUES (?,?,?)", id, hours * 60, m.hourly * hours);
-    }
-
-    const addon = (slug: string, t: [string, string, string], mode: string, amount: number) =>
-      run(db, "INSERT INTO addons (slug, title_pl, title_uk, title_ru, pricing_mode, amount_pln) VALUES (?,?,?,?,?,?)", slug, ...t, mode, amount);
-    addon("instructor", ["Instruktor jadący obok", "Інструктор їде поруч", "Инструктор едет рядом"], "per_hour", 100);
-    addon("gopro", ["Kamera GoPro", "Камера GoPro", "Камера GoPro"], "flat", 30);
-    addon("drone", ["Nagranie z drona", "Зйомка на дрон", "Съёмка на дрон"], "per_hour", 100);
-
-    const gallery = GALLERY_SEED.filter((x) => pub(x.src)).map((x, i) => ({ id: `g${i + 1}`, visible: true, ...x }));
-
-    const settings: Record<string, unknown> = {
-      contact: {
-        phone: "+48 729 497 816",
-        email: "",
-        ownerEmail: "",
-        instagramUrl: "https://www.instagram.com/cross_wroclaw/",
-        facebookUrl: "",
-      },
-      booking: { slotStepMin: 60, minLeadMin: 60, horizonDays: 90 },
-      texts: { heroTitle: { pl: "", uk: "", ru: "" }, heroSubtitle: { pl: "", uk: "", ru: "" } },
-      promo: {
-        enabled: true,
-        title: {
-          pl: "Grupy, wieczory kawalerskie i vouchery",
-          uk: "Групи, парубоцькі вечори та сертифікати",
-          ru: "Группы, мальчишники и сертификаты",
-        },
-        body: {
-          pl: "Jazda prywatna poza grafikiem od 3 maszyn na 2 godziny lub 2 maszyn na 3 godziny. Wybierasz miejsce i godzinę. Vouchery prezentowe (druk lub PDF) ważne 3 lata.",
-          uk: "Приватна їзда поза графіком від 3 машин на 2 години або 2 машин на 3 години. Ви обираєте місце та час. Подарункові сертифікати (друк або PDF) діють 3 роки.",
-          ru: "Частная поездка вне графика от 3 машин на 2 часа или 2 машин на 3 часа. Вы выбираете место и время. Подарочные сертификаты (печать или PDF) действуют 3 года.",
-        },
-      },
-      gallery,
-      session_secret: randomBytes(32).toString("hex"),
-    };
-    for (const [k, v] of Object.entries(settings)) {
-      run(db, "INSERT INTO site_settings (key, value_json, updated_at_utc) VALUES (?,?,?)", k, JSON.stringify(v), now());
-    }
-
-    const email = process.env.ADMIN_EMAIL ?? "admin@motoquad.pl";
-    const pw = process.env.ADMIN_PASSWORD ?? "MotoQuad2026!";
-    run(db, "INSERT INTO admin_users (email, password_hash, password_is_default, updated_at) VALUES (?,?,?,?)",
-      email, hashPassword(pw), process.env.ADMIN_PASSWORD ? 0 : 1, now());
+    insertFreshSeed(db, { keepAdmin: false });
     db.exec("COMMIT");
   } catch (e) {
     db.exec("ROLLBACK");
     throw e;
+  }
+}
+
+function insertFreshSeed(db: DatabaseSync, opts: { keepAdmin: boolean }) {
+  // Locations from @motocross.wro Cennik:
+  // - Sunday: Poligon near Wrocław (51°11'56.8"N 17°05'48.6"E)
+  // - Saturday (plus Mon-Fri private min 2 people / 2h): Kopalnia piasku (50°48'45.2"N 16°34'05.5"E)
+  run(db, `INSERT INTO locations (slug, city_pl, city_uk, city_ru, address_pl, address_uk, address_ru) VALUES (?,?,?,?,?,?,?)`,
+    "wroclaw", "Wrocław — Poligon", "Вроцлав — Полігон", "Вроцлав — Полигон",
+    "Niedziela · Poligon pod Wrocławiem · GPS: 51°11'56.8\"N 17°05'48.6\"E",
+    "Неділя · Локація біля Вроцлава · GPS: 51°11'56.8\"N 17°05'48.6\"E",
+    "Воскресенье · Полигон под Вроцлавом · GPS: 51°11'56.8\"N 17°05'48.6\"E");
+  run(db, `INSERT INTO locations (slug, city_pl, city_uk, city_ru, address_pl, address_uk, address_ru) VALUES (?,?,?,?,?,?,?)`,
+    "karier", "Kopalnia piasku", "Піщаний кар'єр", "Песчаный карьер",
+    "Sobota (Pn–Pt wyjazdy prywatne min. 2 os. / 2 godz.) · GPS: 50°48'45.2\"N 16°34'05.5\"E",
+    "Субота (Пн–Пт приватні виїзди мін. 2 ос. / 2 год.) · GPS: 50°48'45.2\"N 16°34'05.5\"E",
+    "Суббота (Пн–Пт частные выезды мин. 2 чел. / 2 ч) · GPS: 50°48'45.2\"N 16°34'05.5\"E");
+
+  const wro = one<{ id: number }>(db, "SELECT id FROM locations WHERE slug='wroclaw'")!.id;
+  const kar = one<{ id: number }>(db, "SELECT id FROM locations WHERE slug='karier'")!.id;
+  for (let wd = 0; wd <= 6; wd++) {
+    run(db, "INSERT INTO schedules (location_id, weekday, is_open, open_time, close_time) VALUES (?,?,?,?,?)", wro, wd, wd === 0 ? 1 : 0, "09:00", "18:00");
+    run(db, "INSERT INTO schedules (location_id, weekday, is_open, open_time, close_time) VALUES (?,?,?,?,?)", kar, wd, wd >= 1 && wd <= 6 ? 1 : 0, "09:00", "18:00");
+  }
+
+  let order = 0;
+  for (const m of MODELS) {
+    const image = pub(m.image) ? m.image : "";
+    run(db,
+      `INSERT INTO vehicle_models (slug, category, title_pl, title_uk, title_ru, desc_pl, desc_uk, desc_ru, specs_pl, specs_uk, specs_ru, beginner_flag, image_url, published, sort_order)
+       VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,1,?)`,
+      m.slug, m.category, ...m.title, ...m.desc, ...m.specs, m.beginner ? 1 : 0, image, order++);
+    const id = one<{ id: number }>(db, "SELECT id FROM vehicle_models WHERE slug=?", m.slug)!.id;
+    for (const code of m.assets) run(db, "INSERT INTO assets (code, model_id, location_id, active) VALUES (?,?,NULL,1)", code, id);
+    for (const hours of [1, 2, 3]) run(db, "INSERT INTO rates (model_id, duration_min, amount_pln) VALUES (?,?,?)", id, hours * 60, m.hourly * hours);
+  }
+
+  const addon = (slug: string, t: [string, string, string], mode: string, amount: number) =>
+    run(db, "INSERT INTO addons (slug, title_pl, title_uk, title_ru, pricing_mode, amount_pln) VALUES (?,?,?,?,?,?)", slug, ...t, mode, amount);
+  addon("instructor", ["Instruktor podczas jazdy (w cenie)", "Інструктор за потреби (в ціні)", "Инструктор при необходимости (в цене)"], "per_hour", 0);
+  addon("passenger", ["Pasażer na quadzie 2-os. (w cenie)", "Пасажир на двомісному квадроциклі (в ціні)", "Пассажир на двухместном квадроцикле (в цене)"], "per_hour", 0);
+  addon("voucher", ["Voucher podarunkowy (druk / PDF)", "Подарунковий ваучер (друк / PDF)", "Подарочный ваучер (печать / PDF)"], "flat", 150);
+
+  const gallery = GALLERY_SEED.filter((x) => pub(x.src)).map((x, i) => ({ id: `g${i + 1}`, visible: true, ...x }));
+
+  const settings: Record<string, unknown> = {
+    contact: {
+      phone: "+48 729 497 816",
+      email: "",
+      ownerEmail: "",
+      instagramUrl: "https://www.instagram.com/motocross.wro/",
+      facebookUrl: "https://www.facebook.com/share/1ArnwRKLCi/?mibextid=wwXIfr",
+      telegramUrl: "https://t.me/+CWxB07bbqLoyNDVi",
+    },
+    booking: { slotStepMin: 60, minLeadMin: 60, horizonDays: 90 },
+    texts: { heroTitle: { pl: "", uk: "", ru: "" }, heroSubtitle: { pl: "", uk: "", ru: "" } },
+    promo: {
+      enabled: true,
+      title: {
+        pl: "Pn–Pt prywatne wyjazdy i vouchery prezentowe",
+        uk: "Пн–Пт приватні виїзди та подарункові ваучери",
+        ru: "Пн–Пт частные выезды и подарочные ваучеры",
+      },
+      body: {
+        pl: "Od poniedziałku do piątku organizujemy prywatne wyjazdy na kopalnię piasku (minimum 2 osoby i 2 godziny jazdy). Dostępne także vouchery podarunkowe @motocross.wro! Płatność gotówką lub BLIK.",
+        uk: "З понеділка по п'ятницю проводимо приватні виїзди на піщаний кар'єр (мінімум 2 учасники та 2 години катання). Також є подарункові ваучери! Оплата готівкою або BLIK.",
+        ru: "С понедельника по пятницу проводим частные выезды на песчаный карьер (минимум 2 участника и 2 часа катания). Есть подарочные ваучеры! Оплата наличными или BLIK.",
+      },
+    },
+    gallery,
+  };
+  if (!opts.keepAdmin || !one(db, "SELECT key FROM site_settings WHERE key='session_secret'")) {
+    settings.session_secret = randomBytes(32).toString("hex");
+  }
+  for (const [k, v] of Object.entries(settings)) {
+    run(db, "INSERT INTO site_settings (key, value_json, updated_at_utc) VALUES (?,?,?)", k, JSON.stringify(v), now());
+  }
+
+  if (!opts.keepAdmin) {
+    const email = process.env.ADMIN_EMAIL ?? "admin@motoquad.pl";
+    const pw = process.env.ADMIN_PASSWORD ?? "MotoQuad2026!";
+    run(db, "INSERT INTO admin_users (email, password_hash, password_is_default, updated_at) VALUES (?,?,?,?)",
+      email, hashPassword(pw), process.env.ADMIN_PASSWORD ? 0 : 1, now());
   }
 }

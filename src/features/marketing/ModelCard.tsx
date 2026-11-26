@@ -6,11 +6,11 @@ import type { Locale } from "@/shared/i18n/config";
 import type { Dict } from "@/shared/i18n/dictionaries/pl";
 
 const POS: Record<string, string> = {
-  "segway-at5l": "50% 50%",
-  "tgb-4x4": "30% 60%",
-  "enduro-250": "50% 55%",
-  "enduro-standard": "50% 55%",
-  "enduro-300-start": "50% 45%",
+  "quad-kymco-4x4": "50% 50%",
+  "quad-4x4-led": "50% 50%",
+  "pitbike-start": "50% 45%",
+  "honda-crf250r": "50% 45%",
+  "yamaha-cross-250": "50% 50%",
 };
 
 export function ModelCard({ m, d, locale }: { m: ModelDto; d: Dict; locale: Locale }) {

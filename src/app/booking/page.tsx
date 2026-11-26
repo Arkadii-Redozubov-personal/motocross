@@ -41,9 +41,9 @@ export default async function BookingPage({ searchParams }: { searchParams: Prom
       <PageBanner
         title={d.booking.title}
         lead={d.booking.lead}
-        image="/media/ig/asix-88-profile.webp"
+        image="/media/ig/moto-wheelie-quarry.webp"
         imageAlt={d.hero.imgAlt2}
-        imagePosition="50% 55%"
+        imagePosition="50% 50%"
       />
       <section className="bg-obsidian py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">

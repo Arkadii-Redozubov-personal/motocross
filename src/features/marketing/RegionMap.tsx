@@ -14,54 +14,34 @@ type RegionPreset = {
 
 const PRESETS: RegionPreset[] = [
   {
+    id: "poligon",
+    label: {
+      pl: "Poligon pod Wrocławiem (Niedziela)",
+      uk: "Полігон біля Вроцлава (Неділя)",
+      ru: "Полигон под Вроцлавом (Воскресенье)",
+    },
+    query: "51.199111,17.096833",
+    zoom: 14,
+  },
+  {
+    id: "karier",
+    label: {
+      pl: "Kopalnia piasku (Sob / Pn–Pt prywatne)",
+      uk: "Піщаний кар'єр (Сб / Пн–Пт приватні)",
+      ru: "Песчаный карьер (Сб / Пн–Пт частные)",
+    },
+    query: "50.812556,16.568194",
+    zoom: 14,
+  },
+  {
     id: "wroclaw",
     label: {
-      pl: "Wrocław · Wróblowice / Lutynia",
-      uk: "Вроцлав · Врубловіце / Лютиня",
-      ru: "Вроцлав · Врубловице / Лютыня",
+      pl: "Wrocław — okolice",
+      uk: "Вроцлав — околиці",
+      ru: "Вроцлав — окрестности",
     },
-    query: "Wróblowice, Lutynia, Polska",
-    zoom: 12,
-  },
-  {
-    id: "poznan",
-    label: {
-      pl: "Poznań (Sobota)",
-      uk: "Познань (Субота)",
-      ru: "Познань (Суббота)",
-    },
-    query: "Poznań, Polska",
+    query: "Wrocław, Polska",
     zoom: 11,
-  },
-  {
-    id: "swidnica",
-    label: {
-      pl: "Świdnica",
-      uk: "Свідниця",
-      ru: "Свидница",
-    },
-    query: "Świdnica, Polska",
-    zoom: 12,
-  },
-  {
-    id: "sroda",
-    label: {
-      pl: "Środa Śląska",
-      uk: "Сьрода-Шльонська",
-      ru: "Сьрода-Слёнска",
-    },
-    query: "Środa Śląska, Polska",
-    zoom: 12,
-  },
-  {
-    id: "legnica",
-    label: {
-      pl: "Legnica",
-      uk: "Легніца",
-      ru: "Легница",
-    },
-    query: "Legnica, Polska",
-    zoom: 12,
   },
 ];
 
@@ -122,4 +102,3 @@ export function RegionMap({ d, locale }: { d: Dict; locale: Locale }) {
     </div>
   );
 }
-

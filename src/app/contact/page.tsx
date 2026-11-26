@@ -28,9 +28,9 @@ export default async function ContactPage() {
         lead={d.pages.contact.lead}
         ctaHref="/booking"
         ctaLabel={d.common.book}
-        image="/media/ig/segway-trail-action.webp"
+        image="/media/ig/moto-sunset-track.webp"
         imageAlt={d.pages.contact.metaTitle}
-        imagePosition="50% 42%"
+        imagePosition="50% 50%"
       />
       <HowSection d={d} surface="light" />
       <FaqSection d={d} surface="paper" />

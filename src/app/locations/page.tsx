@@ -28,9 +28,9 @@ export default async function LocationsPage() {
         lead={d.pages.locations.lead}
         ctaHref="/booking"
         ctaLabel={d.common.book}
-        image="/media/ig/quarry-4-riders.webp"
+        image="/media/ig/quad-sand-quarry.webp"
         imageAlt={d.pages.locations.metaTitle}
-        imagePosition="50% 45%"
+        imagePosition="50% 50%"
       />
       <LocationsScheduleSection d={d} locale={locale} site={site} surface="light" />
       <LocationsTerrainsSection d={d} locale={locale} surface="obsidian" />

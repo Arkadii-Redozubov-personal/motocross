@@ -13,14 +13,14 @@ import { utcIsoToWarsaw, warsawToUtcIso, weekdayOf } from "@/shared/lib/time";
 const NOW = Date.parse("2026-12-01T08:00:00Z");
 let db: DatabaseSync;
 let wro: number;
-let poz: number;
-let startModel: number; // 1 unit, beginner
-let eco: number; // 3 units
-let seg: number; // 3 quads
+let kar: number;
+let yamaha: number; // 1 unit, cross 200 zl/h
+let eco: number; // pitbike-start: 3 units, 150 zl/h, beginner
+let quad: number; // quad-kymco-4x4: 3 quads, 250 zl/h
 
 const base = (over: Record<string, unknown> = {}) =>
   bookingInput.parse({
-    locationId: wro, date: "2026-12-02", startTime: "10:00", durationMin: 120, modelId: startModel, qty: 1,
+    locationId: kar, date: "2026-12-02", startTime: "10:00", durationMin: 120, modelId: yamaha, qty: 1,
     name: "Jan Kowalski", phone: "+48 600 100 200", consent: true, idempotencyKey: `key-${Math.random().toString(36).slice(2)}-xx`,
     ...over,
   });
@@ -30,10 +30,10 @@ beforeEach(() => {
   db = openDatabase(":memory:");
   seedIfEmpty(db);
   wro = one<{ id: number }>(db, "SELECT id FROM locations WHERE slug='wroclaw'")!.id;
-  poz = one<{ id: number }>(db, "SELECT id FROM locations WHERE slug='poznan'")!.id;
-  startModel = one<{ id: number }>(db, "SELECT id FROM vehicle_models WHERE slug='enduro-300-start'")!.id;
-  eco = one<{ id: number }>(db, "SELECT id FROM vehicle_models WHERE slug='enduro-250'")!.id;
-  seg = one<{ id: number }>(db, "SELECT id FROM vehicle_models WHERE slug='segway-at5l'")!.id;
+  kar = one<{ id: number }>(db, "SELECT id FROM locations WHERE slug='karier'")!.id;
+  yamaha = one<{ id: number }>(db, "SELECT id FROM vehicle_models WHERE slug='yamaha-cross-250'")!.id;
+  eco = one<{ id: number }>(db, "SELECT id FROM vehicle_models WHERE slug='pitbike-start'")!.id;
+  quad = one<{ id: number }>(db, "SELECT id FROM vehicle_models WHERE slug='quad-kymco-4x4'")!.id;
 });
 
 const mk = (over: Record<string, unknown> = {}) => {
@@ -60,22 +60,22 @@ describe("timezone (Europe/Warsaw <-> UTC, DST)", () => {
 });
 
 describe("AC-01/02 schedule, location and pricing", () => {
-  it("Wroclaw on weekdays and Sunday, Poznan on Saturday", () => {
-    expect(resolveDay(db, "2026-12-02").map((d) => d.slug)).toEqual(["wroclaw"]);
-    expect(resolveDay(db, "2026-12-05").map((d) => d.slug)).toEqual(["poznan"]);
+  it("Karier Mon-Sat, Wroclaw Poligon on Sunday", () => {
+    expect(resolveDay(db, "2026-12-02").map((d) => d.slug)).toEqual(["karier"]);
+    expect(resolveDay(db, "2026-12-05").map((d) => d.slug)).toEqual(["karier"]);
     expect(resolveDay(db, "2026-12-06").map((d) => d.slug)).toEqual(["wroclaw"]);
   });
   it("closed date cannot be booked; exceptions close a date", () => {
-    expect(createBooking(db, base({ locationId: poz }), NOW)).toMatchObject({ ok: false, code: "CLOSED_DATE" });
-    db.prepare("INSERT INTO schedule_exceptions (location_id, date_ymd, is_open, note) VALUES (?, '2026-12-03', 0, 'holiday')").run(wro);
+    expect(createBooking(db, base({ locationId: wro }), NOW)).toMatchObject({ ok: false, code: "CLOSED_DATE" });
+    db.prepare("INSERT INTO schedule_exceptions (location_id, date_ymd, is_open, note) VALUES (?, '2026-12-03', 0, 'holiday')").run(kar);
     expect(createBooking(db, base({ date: "2026-12-03" }), NOW)).toMatchObject({ ok: false, code: "CLOSED_DATE" });
     const cal = calendarMonth(db, "2026-12", NOW);
     expect(cal.find((d) => d.date === "2026-12-03")!.open).toBe(false);
-    expect(cal.find((d) => d.date === "2026-12-05")).toMatchObject({ open: true, slug: "poznan" });
+    expect(cal.find((d) => d.date === "2026-12-06")).toMatchObject({ open: true, slug: "wroclaw" });
     expect(cal.find((d) => d.date === "2026-11-30" || d.date === "2026-12-01")!.open).toBeDefined();
   });
-  it("server computes price (hourly rates, per-hour add-ons)", () => {
-    expect(quote(db, { modelId: eco, durationMin: 120, qty: 2, addons: ["instructor", "gopro"] })).toMatchObject({ subtotal: 600, total: 600 + 200 + 30 });
+  it("server computes price (hourly rates, add-ons)", () => {
+    expect(quote(db, { modelId: eco, durationMin: 120, qty: 2, addons: ["instructor", "voucher"] })).toMatchObject({ subtotal: 600, total: 600 + 150 });
     expect(quote(db, { modelId: eco, durationMin: 45, qty: 1, addons: [] })).toBeNull();
   });
   it("fleet quotas match the spec: 4 quads, 7 motorcycles, one beginner model", () => {
@@ -96,10 +96,10 @@ describe("AC-03 request creation", () => {
     const b = mk();
     expect(b.status).toBe("NEW");
     expect(b.referenceCode).toMatch(/^MQ-/);
-    expect(one<{ unit_price_snapshot_pln: number }>(db, "SELECT unit_price_snapshot_pln FROM booking_items WHERE booking_id = ?", b.id)!.unit_price_snapshot_pln).toBe(500);
+    expect(one<{ unit_price_snapshot_pln: number }>(db, "SELECT unit_price_snapshot_pln FROM booking_items WHERE booking_id = ?", b.id)!.unit_price_snapshot_pln).toBe(400);
     // changing the price later does not touch history
-    db.prepare("UPDATE rates SET amount_pln = 999 WHERE model_id = ?").run(startModel);
-    expect(listBookings(db)[0].items[0].unit).toBe(500);
+    db.prepare("UPDATE rates SET amount_pln = 999 WHERE model_id = ?").run(yamaha);
+    expect(listBookings(db)[0].items[0].unit).toBe(400);
   });
   it("is idempotent for repeated submissions", () => {
     const input = base();
@@ -121,7 +121,7 @@ describe("AC-03 request creation", () => {
 
 describe("AC-04/05 availability and confirmation", () => {
   it("NEW does not block, CONFIRMED blocks, CANCELLED restores", () => {
-    const free = () => slotsFor(db, { ymd: "2026-12-02", locationId: wro, modelId: startModel, durationMin: 120, qty: 1 }, NOW)!.slots.find((s) => s.hm === "10:00")!;
+    const free = () => slotsFor(db, { ymd: "2026-12-02", locationId: kar, modelId: yamaha, durationMin: 120, qty: 1 }, NOW)!.slots.find((s) => s.hm === "10:00")!;
     const b = mk();
     expect(free().available).toBe(true);
     expect(confirmBooking(db, b.id, "t@t")).toEqual({ ok: true, status: "CONFIRMED" });
@@ -159,7 +159,7 @@ describe("AC-04/05 availability and confirmation", () => {
     confirmBooking(db, a.id, "t@t");
     const ids = all<{ asset_id: number }>(db, "SELECT asset_id FROM booking_allocations").map((x) => x.asset_id);
     expect(new Set(ids).size).toBe(2);
-    const r = slotsFor(db, { ymd: "2026-12-02", locationId: wro, modelId: eco, durationMin: 120, qty: 1 }, NOW)!.slots.find((s) => s.hm === "10:00")!;
+    const r = slotsFor(db, { ymd: "2026-12-02", locationId: kar, modelId: eco, durationMin: 120, qty: 1 }, NOW)!.slots.find((s) => s.hm === "10:00")!;
     expect(r.free).toBe(1);
   });
   it("reject and invalid transitions", () => {
@@ -169,10 +169,10 @@ describe("AC-04/05 availability and confirmation", () => {
     expect(cancelBooking(db, a.id, "t@t")).toMatchObject({ ok: false, code: "INVALID_STATE" });
   });
   it("quads and motorcycles are independent inventories", () => {
-    mk({ modelId: seg, qty: 3 });
-    const q = mk({ modelId: seg, qty: 3 });
+    mk({ modelId: quad, qty: 3 });
+    const q = mk({ modelId: quad, qty: 3 });
     expect(confirmBooking(db, q.id, "t@t").ok).toBe(true);
-    const s = slotsFor(db, { ymd: "2026-12-02", locationId: wro, modelId: startModel, durationMin: 120, qty: 1 }, NOW)!.slots.find((x) => x.hm === "10:00")!;
+    const s = slotsFor(db, { ymd: "2026-12-02", locationId: kar, modelId: yamaha, durationMin: 120, qty: 1 }, NOW)!.slots.find((x) => x.hm === "10:00")!;
     expect(s.available).toBe(true);
   });
 });

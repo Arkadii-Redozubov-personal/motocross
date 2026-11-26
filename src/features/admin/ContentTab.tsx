@@ -6,7 +6,7 @@ import { Trash2 } from "lucide-react";
 import { api, Field, L3Inputs, Toast, UploadButton, useToast, type L3 } from "./shared";
 
 type Content = {
-  contact: { phone: string; email: string; ownerEmail: string; instagramUrl: string; facebookUrl: string };
+  contact: { phone: string; email: string; ownerEmail: string; instagramUrl: string; facebookUrl: string; telegramUrl: string };
   texts: { heroTitle: L3; heroSubtitle: L3 };
   promo: { enabled: boolean; title: L3; body: L3 };
   gallery: { id: string; src: string; alt: L3; visible: boolean }[];
@@ -31,6 +31,7 @@ export function ContentTab({ initial }: { initial: Content }) {
           <Field label="E-mail власника для сповіщень про заявки"><input type="email" className="field" value={c.contact.ownerEmail} onChange={(e) => setC({ ...c, contact: { ...c.contact, ownerEmail: e.target.value } })} /></Field>
           <Field label="Instagram (URL)"><input type="url" className="field" value={c.contact.instagramUrl} onChange={(e) => setC({ ...c, contact: { ...c.contact, instagramUrl: e.target.value } })} /></Field>
           <Field label="Facebook (URL)"><input type="url" className="field" value={c.contact.facebookUrl} onChange={(e) => setC({ ...c, contact: { ...c.contact, facebookUrl: e.target.value } })} /></Field>
+          <Field label="Telegram (URL)"><input type="url" className="field" value={c.contact.telegramUrl} onChange={(e) => setC({ ...c, contact: { ...c.contact, telegramUrl: e.target.value } })} /></Field>
         </div>
       </div>
 

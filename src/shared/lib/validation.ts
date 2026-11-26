@@ -40,6 +40,7 @@ export const contentInput = z.object({
     ownerEmail: z.union([z.literal(""), z.string().email().max(150)]),
     instagramUrl: url,
     facebookUrl: url,
+    telegramUrl: url.optional().default(""),
   }),
   texts: z.object({ heroTitle: l3, heroSubtitle: l3 }),
   promo: z.object({ enabled: z.boolean(), title: l3, body: l3 }),

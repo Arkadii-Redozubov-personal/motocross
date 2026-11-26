@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase: new URL(base),
     title: d.meta.title,
     description: d.meta.description,
-    openGraph: { title: d.meta.title, description: d.meta.description, type: "website", images: ["/media/client/quads-terrain.webp"] },
+    openGraph: { title: d.meta.title, description: d.meta.description, type: "website", images: ["/media/ig/hero-fleet-lineup.webp"] },
     alternates: { canonical: "/", languages: { pl: "/?lang=pl", uk: "/?lang=uk", ru: "/?lang=ru", "x-default": "/" } },
   };
 }

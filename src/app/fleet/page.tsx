@@ -28,9 +28,9 @@ export default async function FleetPage() {
         lead={d.pages.fleet.lead}
         ctaHref="/booking"
         ctaLabel={d.common.book}
-        image="/media/ig/enduro-lineup.webp"
+        image="/media/ig/hero-fleet-lineup.webp"
         imageAlt={d.pages.fleet.metaTitle}
-        imagePosition="50% 60%"
+        imagePosition="50% 55%"
       />
       <FleetSection d={d} locale={locale} site={site} surface="light" />
       <PricesSection d={d} locale={locale} site={site} surface="obsidian" />

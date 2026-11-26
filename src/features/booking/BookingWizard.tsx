@@ -346,7 +346,9 @@ export function BookingWizard(props: { d: Dict; locale: Locale; models: ModelDto
                 <input type="checkbox" className="size-5 accent-[#f5b700]" checked={addonSel.includes(a.slug)}
                   onChange={(e) => setAddonSel((cur) => (e.target.checked ? [...cur, a.slug] : cur.filter((x) => x !== a.slug)))} />
                 <span className="flex-1">{a.title[locale]}</span>
-                <span className="num whitespace-nowrap font-display font-semibold text-amber">+{a.amount_pln} {a.pricing_mode === "per_hour" ? d.common.perHour : d.common.zl}</span>
+                <span className="num whitespace-nowrap font-display font-semibold text-amber">
+                  {a.amount_pln === 0 ? d.prices.included : `+${a.amount_pln} ${a.pricing_mode === "per_hour" ? d.common.perHour : d.common.zl}`}
+                </span>
               </label>
             ))}
           </fieldset>

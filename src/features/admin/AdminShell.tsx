@@ -21,7 +21,7 @@ type Props = {
   locations: LocationDto[];
   exceptions: ExceptionDto[];
   content: {
-    contact: { phone: string; email: string; ownerEmail: string; instagramUrl: string; facebookUrl: string };
+    contact: { phone: string; email: string; ownerEmail: string; instagramUrl: string; facebookUrl: string; telegramUrl: string };
     texts: { heroTitle: L3; heroSubtitle: L3 };
     promo: { enabled: boolean; title: L3; body: L3 };
     gallery: { id: string; src: string; alt: L3; visible: boolean }[];

@@ -3,29 +3,28 @@ import { Fragment } from "react";
 export function Wordmark({ className = "", size = "sm" }: { className?: string; size?: "sm" | "lg" }) {
   const lg = size === "lg";
   return (
-    <span className={`inline-flex flex-col items-center leading-none select-none ${className}`} aria-label="NA TERENIE — MOTO/QUAD">
+    <span className={`inline-flex flex-col items-center leading-none select-none ${className}`} aria-label="MOTOCROSS WRO — @motocross.wro">
       <svg
-        viewBox="0 0 140 26"
-        className={lg ? "h-[24px] w-[154px] sm:h-[28px] sm:w-[172px]" : "h-[16px] w-[104px] sm:h-[21px] sm:w-[132px]"}
+        viewBox="0 0 148 26"
+        className={lg ? "h-[24px] w-[166px] sm:h-[28px] sm:w-[186px]" : "h-[16px] w-[112px] sm:h-[21px] sm:w-[144px]"}
         fill="none"
         aria-hidden="true"
       >
         <path
-          d="M4 23 L26 9 L39 17 L64 2 L90 15 L112 5 L136 23 L119 23 L112 16 L101 23 L90 23 L82 17 L64 9 L52 19 L46 23 L39 18 L26 15 L14 23 Z"
+          d="M6 23 L32 6 L45 16 L72 2 L98 16 L118 7 L142 23 L121 23 L114 16 L98 23 L84 16 L72 10 L54 23 L42 15 L26 23 Z"
           fill="#f5b700"
         />
-        <path d="M64 2 L74 13 L68 15 L64 9 Z" fill="#ffca28" />
-        <path d="M112 5 L122 16 L116 17 L112 14 Z" fill="#ffca28" />
-        <path d="M26 9 L33 16 L28 17 L26 15 Z" fill="#ffca28" />
-        <path d="M2 24 L138 24 L135 25.6 L4 25.6 Z" fill="#f5b700" opacity="0.88" />
+        <path d="M72 2 L82 12 L75 14 L72 10 Z" fill="#ffca28" />
+        <path d="M32 6 L40 15 L34 16 L32 12 Z" fill="#ffca28" />
+        <path d="M2 24 L146 24 L143 25.6 L5 25.6 Z" fill="#f5b700" opacity="0.88" />
       </svg>
       <span
         className={`mt-0.5 inline-flex items-baseline font-display font-bold italic uppercase leading-none tracking-[0.04em] ${
-          lg ? "text-2xl sm:text-[1.75rem]" : "text-[1.05rem] sm:text-[1.35rem]"
+          lg ? "text-2xl sm:text-[1.75rem]" : "text-[1.05rem] sm:text-[1.32rem]"
         }`}
       >
-        <span className="text-[#f5f5f4]">NA</span>
-        <span className="ml-1 text-amber">TERENIE</span>
+        <span className="text-[#f5f5f4]">MOTOCROSS</span>
+        <span className="text-amber">.WRO</span>
       </span>
       <span className={`mt-0.5 block bg-amber ${lg ? "h-[2.5px] w-full" : "h-[2px] w-[96%]"}`} aria-hidden="true" />
     </span>

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight, BadgeCheck, Check, ChevronDown, ChevronUp, Clock, Facebook, Fuel,
-  GraduationCap, HardHat, Instagram, Mail, MapPin, Phone, Quote, Ruler, Shirt,
+  GraduationCap, HardHat, Instagram, Mail, MapPin, Phone, Quote, Ruler, Send, Shirt,
 } from "lucide-react";
 import { SplitTitle, formatPhoneHref, Wordmark } from "./ui";
 import { ModelCard } from "./ModelCard";
@@ -22,7 +22,7 @@ const bgOf = (s: Surface) =>
   s === "light" ? "surface-light" :
   "surface-paper";
 
-const FLAGSHIP_SLUGS = ["segway-at5l", "enduro-300-start", "enduro-250"];
+const FLAGSHIP_SLUGS = ["quad-kymco-4x4", "honda-crf250r", "pitbike-start"];
 
 export function FleetTeaser({ d, locale, site, surface = "slate" }: { d: Dict; locale: Locale; site: Site; surface?: Surface }) {
   const picked = FLAGSHIP_SLUGS.map((slug) => site.models.find((m) => m.slug === slug)).filter(
@@ -149,7 +149,11 @@ export function PricesSection({ d, locale, site, surface = "obsidian" }: { d: Di
               <li key={a.id} className="flex items-baseline justify-between gap-4 py-3">
                 <span>{a.title[locale]}</span>
                 <span className="num whitespace-nowrap font-display text-xl font-semibold text-amber-text">
-                  +{a.amount_pln} <span className="text-sm font-medium text-fg-2">{a.pricing_mode === "per_hour" ? d.common.perHour : `${d.common.zl} ${d.prices.flat}`}</span>
+                  {a.amount_pln === 0 ? d.prices.included : (
+                    <>
+                      +{a.amount_pln} <span className="text-sm font-medium text-fg-2">{a.pricing_mode === "per_hour" ? d.common.perHour : `${d.common.zl} ${d.prices.flat}`}</span>
+                    </>
+                  )}
                 </span>
               </li>
             ))}
@@ -456,6 +460,7 @@ export function ContactSection({ d, site, surface = "slate" }: { d: Dict; site: 
           <div className="flex flex-wrap gap-3 pt-2">
             <Link href="/booking" className="btn btn-amber">{d.common.book}</Link>
             {c.instagramUrl && <a href={c.instagramUrl} target="_blank" rel="noopener noreferrer" className="btn btn-ghost"><Instagram size={18} aria-hidden="true" />{d.common.instagram}</a>}
+            {c.telegramUrl && <a href={c.telegramUrl} target="_blank" rel="noopener noreferrer" className="btn btn-ghost"><Send size={18} aria-hidden="true" />{d.common.telegram}</a>}
             {c.facebookUrl && <a href={c.facebookUrl} target="_blank" rel="noopener noreferrer" className="btn btn-ghost"><Facebook size={18} aria-hidden="true" />{d.common.facebook}</a>}
             {c.email && <a href={`mailto:${c.email}`} className="btn btn-ghost"><Mail size={18} aria-hidden="true" />{c.email}</a>}
           </div>
@@ -489,7 +494,7 @@ export function SiteFooter({ d, locale, site }: { d: Dict; locale: Locale; site:
           <LangSwitch locale={locale} label={d.common.langLabel} />
         </div>
       </div>
-      <p className={`${wrap} mt-6 text-xs text-fg-3`}>© {new Date().getFullYear()} MOTO/QUAD TEREN. {d.footer.rights}</p>
+      <p className={`${wrap} mt-6 text-xs text-fg-3`}>© {new Date().getFullYear()} MOTOCROSS WRO. {d.footer.rights}</p>
     </footer>
   );
 }

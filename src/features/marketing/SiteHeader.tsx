@@ -40,13 +40,13 @@ export function SiteHeader({ d, locale, phone, instagramUrl }: { d: Dict; locale
           {instagramUrl && (
             <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 font-medium text-fg-2 transition-colors hover:text-amber">
               <Instagram size={13} className="text-amber" aria-hidden="true" />
-              @cross_wroclaw
+              @motocross.wro
             </a>
           )}
         </div>
       </div>
       <div className="mx-auto flex h-[68px] max-w-7xl items-center gap-2 px-3 sm:h-[72px] sm:gap-3 sm:px-6 lg:gap-4">
-        <Link href="/" className="shrink-0 py-1" aria-label="NA TERENIE — MOTO/QUAD">
+        <Link href="/" className="shrink-0 py-1" aria-label="MOTOCROSS WRO">
           <Wordmark />
         </Link>
         <nav aria-label="Main" className="ml-2 hidden flex-1 items-center gap-4 2xl:gap-6 xl:flex">
